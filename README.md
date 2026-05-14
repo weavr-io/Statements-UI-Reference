@@ -1,5 +1,7 @@
 # Weavr Statements API — Embedder Reference
 
+![Preview of the Statements demo UI](./example.png)
+
 A minimal React + TypeScript reference for calling the new managed account statement endpoint, rendering the JSON response, and downloading the PDF.
 
 The **source code is the product**. The running UI is here to prove it works and make the reference feel concrete. You're expected to copy a handful of files into your own app, not fork this project.
