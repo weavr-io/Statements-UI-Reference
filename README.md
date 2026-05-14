@@ -1,6 +1,6 @@
 # Weavr Statements API — Embedder Reference
 
-![Preview of the Statements demo UI](./example.png)
+![Preview of the Statements demo UI](./exampleScreen.png)
 
 A minimal React + TypeScript reference for calling the new managed account statement endpoint, rendering the JSON response, and downloading the PDF.
 
