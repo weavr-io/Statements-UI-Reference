@@ -4,6 +4,7 @@ import type { InstrumentTransactions } from '../api/activity-types';
 import { ActivitySummary } from './ActivitySummary';
 import { ActivityTable } from './ActivityTable';
 import { ErrorBanner } from './ErrorBanner';
+import { deriveSelfInstrumentId } from '../activity-display';
 
 export type ActivityInstrument = 'account' | 'card';
 
@@ -44,7 +45,10 @@ export function ActivityView({ baseUrl, authToken, instrument, accountId, cardId
 
   const { data } = state;
   const instrumentLabel = instrument === 'card' ? 'Card' : 'Account';
-  const instrumentId = instrument === 'card' ? cardId : accountId;
+  const instrumentType = instrument === 'card' ? 'managed_cards' : 'managed_accounts';
+  // Prefer the real instrument id recovered from the response; fall back to config.
+  const instrumentId = deriveSelfInstrumentId(data.transactions, instrumentType)
+    ?? (instrument === 'card' ? cardId : accountId);
 
   return (
     <article className="statement">

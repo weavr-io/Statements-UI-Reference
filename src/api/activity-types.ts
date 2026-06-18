@@ -33,6 +33,10 @@ export interface SystemTransactionActivity {
   status: string;
   instrument: InstrumentRef;
   amount: CurrencyAmount;
+  /** Not present on every system transaction; surfaced in the UI when it is. */
+  subtype?: string;
+  /** Free-text reason for the adjustment, when the wire provides one. */
+  reason?: string;
 }
 
 export interface FeeActivity {
