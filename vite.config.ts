@@ -4,10 +4,19 @@ import { readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 /* Dev-only. Delete this plugin and its registration when adopting in your own app.
- * Intercepts GET /managed_accounts/{id}/statement and serves the captured fixture
- * (JSON or PDF based on the Accept header) so the demo runs zero-setup. */
+ * Serves captured fixtures for the statement and transaction-activity endpoints so
+ * the demo runs zero-setup. Statement supports content negotiation (JSON or PDF);
+ * the activity endpoints are JSON only. */
 function statementMockPlugin(): Plugin {
   const fixturesDir = resolve(__dirname, 'public/fixtures');
+
+  // First matching pattern wins. `pdf` is only set for routes that content-negotiate.
+  const routes: Array<{ pattern: RegExp; json: string; pdf?: string }> = [
+    { pattern: /^\/managed_accounts\/\d+\/statement$/, json: 'statement.json', pdf: 'statement.pdf' },
+    { pattern: /^\/managed_accounts\/\d+\/transactions$/, json: 'activity_account.json' },
+    { pattern: /^\/managed_cards\/\d+\/transactions$/, json: 'activity_card.json' },
+  ];
+
   return {
     name: 'statement-mock',
     configureServer(server) {
@@ -15,14 +24,15 @@ function statementMockPlugin(): Plugin {
         if (req.method !== 'GET' || !req.url) return next();
         // Strip query string before matching the path.
         const path = req.url.split('?')[0];
-        if (!/^\/managed_accounts\/\d+\/statement$/.test(path)) return next();
+        const route = routes.find(r => r.pattern.test(path));
+        if (!route) return next();
 
         const accept = String(req.headers.accept ?? '');
-        const isPdf = accept.includes('application/pdf');
-        const fileName = isPdf ? 'statement.pdf' : 'statement.json';
+        const wantsPdf = accept.includes('application/pdf') && Boolean(route.pdf);
+        const fileName = wantsPdf ? route.pdf! : route.json;
         try {
           const body = readFileSync(resolve(fixturesDir, fileName));
-          res.setHeader('Content-Type', isPdf ? 'application/pdf' : 'application/json');
+          res.setHeader('Content-Type', wantsPdf ? 'application/pdf' : 'application/json');
           res.statusCode = 200;
           res.end(body);
         } catch (e) {
