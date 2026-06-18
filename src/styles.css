@@ -737,6 +737,114 @@ td.entry-time {
   word-break: break-word;
 }
 
+/* View switcher ------------------------------------------------------- */
+
+.view-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.segmented {
+  display: inline-flex;
+  padding: 3px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  gap: 2px;
+}
+
+.segmented .segment {
+  appearance: none;
+  border: none;
+  background: transparent;
+  font: inherit;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--muted);
+  padding: 0.4rem 0.85rem;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.12s ease, color 0.12s ease;
+}
+
+.segmented .segment:hover {
+  color: var(--fg);
+}
+
+.segmented .segment.active {
+  background: var(--card);
+  color: var(--fg);
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.segmented-sub {
+  background: transparent;
+  border-color: var(--border);
+}
+
+/* Status badge -------------------------------------------------------- */
+
+.status-badge {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--fg-soft);
+}
+
+.status-badge.status-ok      { background: var(--credit-bg); border-color: var(--credit-border); color: var(--credit); }
+.status-badge.status-pending { background: var(--tone-amber-bg); border-color: var(--tone-amber-bd); color: var(--tone-amber-fg); }
+.status-badge.status-warn    { background: var(--debit-bg); border-color: var(--debit-border); color: var(--debit); }
+.status-badge.status-neutral { background: var(--tone-slate-bg); border-color: var(--tone-slate-bd); color: var(--tone-slate-fg); }
+
+.amount-value {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Card event timeline ------------------------------------------------- */
+
+.event-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.event-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+}
+
+.event-type {
+  font-weight: 600;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--accent);
+}
+
+.event-meta {
+  display: flex;
+  gap: 0.6rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
 /* Responsive ---------------------------------------------------------- */
 
 @media (max-width: 720px) {
