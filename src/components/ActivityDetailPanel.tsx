@@ -11,7 +11,7 @@ import type {
 } from '../api/activity-types';
 import { formatMoney } from '../format';
 import { transactionLabel, SUBTYPE_LABEL } from '../labels';
-import { activityCounterparty } from '../activity-display';
+import { activityCounterparty, type CounterpartyDisplay } from '../activity-display';
 
 interface Item {
   label: string;
@@ -83,6 +83,20 @@ function stateItem(state: string | undefined): Item | null {
   return state ? { label: 'State', value: state } : null;
 }
 
+/* The Counterparty section: the derived name, plus type-specific identity fields.
+ * Incoming wires identify the counterparty by the sender's IBAN, so it belongs here
+ * rather than in the generic "Detail" line. */
+function counterpartyItems(tx: ActivityTransaction, cp: CounterpartyDisplay): Item[] {
+  const items: Item[] = [{ label: 'Name', value: cp.primary }];
+  if (tx.type === 'incoming_wire_transfers') {
+    const p = tx.transaction as IncomingWireActivity;
+    if (p.senderIban) items.push({ label: 'Sender IBAN', value: p.senderIban });
+    return items;
+  }
+  if (cp.secondary) items.push({ label: 'Detail', value: cp.secondary });
+  return items;
+}
+
 /* The type-specific free-text and reference fields — the "why" of each transaction.
  * Each `type` carries these differently (a wire's description, a card's merchant, a
  * transfer's tag), so we read the narrowed payload per type. The transaction's own
@@ -102,10 +116,10 @@ function detailItems(tx: ActivityTransaction): Item[] {
       break;
     }
     case 'incoming_wire_transfers': {
+      // Sender name + IBAN identify the counterparty (Counterparty section);
+      // the reference and network are the "how", shown here.
       const p = tx.transaction as IncomingWireActivity;
       if (p.senderReference) items.push({ label: 'Sender reference', value: p.senderReference });
-      if (p.senderName) items.push({ label: 'Sender', value: p.senderName });
-      if (p.senderIban) items.push({ label: 'Sender IBAN', value: p.senderIban });
       if (p.paymentNetwork) items.push({ label: 'Network', value: p.paymentNetwork });
       break;
     }
@@ -195,15 +209,7 @@ export function ActivityDetailPanel({ tx }: Props) {
         {details.length > 0 && <Section title="Details" items={details} />}
         <Section title="Timestamps" items={timestampItems(tx)} />
         <Section title="Amount" items={amountItems(tx)} />
-        {cp && (
-          <Section
-            title="Counterparty"
-            items={[
-              { label: 'Name', value: cp.primary },
-              ...(cp.secondary ? [{ label: 'Detail', value: cp.secondary }] : []),
-            ]}
-          />
-        )}
+        {cp && <Section title="Counterparty" items={counterpartyItems(tx, cp)} />}
         {payment && <CardEvents payment={payment} />}
       </div>
       <div className="detail-json">
