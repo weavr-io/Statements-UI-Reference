@@ -879,6 +879,16 @@ td.entry-time {
   font-weight: 500;
 }
 
+.event-declined {
+  color: var(--debit);
+  font-weight: 600;
+}
+
+.event-reason {
+  color: var(--debit);
+  font-size: 0.74rem;
+}
+
 /* Responsive ---------------------------------------------------------- */
 
 @media (max-width: 720px) {

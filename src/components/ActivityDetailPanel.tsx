@@ -2,6 +2,7 @@ import { Fragment, useState, type MouseEvent } from 'react';
 import type {
   ActivityTransaction,
   CardPaymentActivity,
+  CardPaymentEvent,
   FeeActivity,
   IncomingWireActivity,
   OutgoingWireActivity,
@@ -175,6 +176,21 @@ function feeTypeLabel(type: string): string {
   return FEE_TYPE_LABELS[type] ?? type.replace(/_/g, ' ').toLowerCase().replace(/^\w/, c => c.toUpperCase());
 }
 
+function humaniseReason(raw: string): string {
+  return raw.replace(/_/g, ' ').toLowerCase().replace(/^\w/, c => c.toUpperCase());
+}
+
+/* Why an authorisation was declined: the high-level declineReason plus the specific
+ * spend-control rule that failed. NOT_SPEND_CONTROL_RULE_FAILURE is the "no rule
+ * failed" sentinel, so it is not surfaced as a reason. */
+function declineReasonText(ev: CardPaymentEvent): string | null {
+  const ruleFailed = ev.authRuleFailedReason && !ev.authRuleFailedReason.startsWith('NOT_')
+    ? ev.authRuleFailedReason
+    : undefined;
+  const parts = [ev.declineReason, ruleFailed].filter(Boolean) as string[];
+  return parts.length ? parts.map(humaniseReason).join(' · ') : null;
+}
+
 function CardEvents({ payment }: { payment: CardPaymentActivity }) {
   return (
     <div className="detail-section">
@@ -188,11 +204,13 @@ function CardEvents({ payment }: { payment: CardPaymentActivity }) {
           const crossCurrency = !!(billing && txn && txn.currency !== billing.currency);
           // Only fees that actually applied — domestic events carry zeroed forex/platform fees.
           const fees = (ev.fees ?? []).filter(f => f.amount.amount !== 0);
+          const declined = ev.result === 'DECLINED';
+          const declineReason = declineReasonText(ev);
           return (
             <li key={ev.id + ev.type} className="event-item">
               <div className="event-head">
                 <span className="event-type">{ev.type}</span>
-                {ev.result && <span>{ev.result}</span>}
+                {ev.result && <span className={declined ? 'event-declined' : undefined}>{ev.result}</span>}
                 {ev.settlementState && <span>{ev.settlementState}</span>}
                 {ev.authCode && <span>auth {ev.authCode}</span>}
               </div>
@@ -206,6 +224,7 @@ function CardEvents({ payment }: { payment: CardPaymentActivity }) {
                   <span key={f.type + i} className="event-fee">{feeTypeLabel(f.type)} {formatMoney(f.amount)}</span>
                 ))}
               </div>
+              {declineReason && <div className="event-reason">{declineReason}</div>}
             </li>
           );
         })}

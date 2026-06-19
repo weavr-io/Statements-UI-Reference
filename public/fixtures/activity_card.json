@@ -1,22 +1,301 @@
 {
-    "responseCount": 11,
+    "responseCount": 14,
     "transactions": [
         {
-            "creationTimestamp": 1781791463668,
-            "lastUpdatedTimestamp": 1781791476983,
+            "creationTimestamp": 1781866388327,
+            "fee": {
+                "id": "116776395604164609",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 5
+                }
+            },
+            "lastUpdatedTimestamp": 1781866394509,
+            "status": "RETURNED",
+            "transaction": {
+                "type": "PURCHASE",
+                "card": {
+                    "type": "managed_cards",
+                    "parentManagedAccountId": "116776347499233281",
+                    "nameOnCard": "name on card",
+                    "cardNumberFirstSix": "522093",
+                    "friendlyName": "Project Acme Card",
+                    "cardNumberLastFour": "4351",
+                    "mode": "debit",
+                    "cardBrand": "MASTERCARD",
+                    "id": "116776348235988993"
+                },
+                "merchant": {
+                    "categoryCode": "5399",
+                    "country": "MT",
+                    "name": "Refundable.com"
+                },
+                "status": "SETTLED",
+                "events": [
+                    {
+                        "type": "AUTHORISATION",
+                        "id": "116776395605344257",
+                        "subtype": "sale_purchases",
+                        "fees": [],
+                        "cancellationReason": "",
+                        "authCode": "566450",
+                        "result": "APPROVED",
+                        "authorisationCategory": "FINAL_AUTH",
+                        "billingAmount": {
+                            "currency": "EUR",
+                            "amount": 1000
+                        },
+                        "transactionAmount": {
+                            "currency": "EUR",
+                            "amount": 1000
+                        },
+                        "authRuleFailedReason": "NOT_SPEND_CONTROL_RULE_FAILURE",
+                        "reversal": false,
+                        "type": "AUTHORISATION",
+                        "timestamp": 1781866388327,
+                        "processedTimestamp": 1781866387557
+                    },
+                    {
+                        "type": "SETTLEMENT",
+                        "id": "116776395605344513",
+                        "subtype": "sale_purchases",
+                        "fees": [
+                            {
+                                "type": "PLATFORM_FEE",
+                                "type": "PLATFORM_FEE",
+                                "id": "116776395326488577",
+                                "subtype": "purchase_fees",
+                                "amount": {
+                                    "currency": "EUR",
+                                    "amount": 0
+                                }
+                            },
+                            {
+                                "type": "FOREX_FEE",
+                                "type": "FOREX_FEE",
+                                "amount": {
+                                    "currency": "EUR",
+                                    "amount": 0
+                                }
+                            }
+                        ],
+                        "authCode": "566450",
+                        "settlementState": "COMPLETED",
+                        "billingAmount": {
+                            "currency": "EUR",
+                            "amount": 1000
+                        },
+                        "transactionAmount": {
+                            "currency": "EUR",
+                            "amount": 1000
+                        },
+                        "reversal": false,
+                        "type": "SETTLEMENT",
+                        "processedTimestamp": 1781866387557,
+                        "timestamp": 1781866388681
+                    },
+                    {
+                        "type": "REFUND",
+                        "id": "116776395605345281",
+                        "subtype": "purchase_refunds",
+                        "fees": [
+                            {
+                                "type": "PLATFORM_FEE",
+                                "type": "PLATFORM_FEE",
+                                "id": "116776395328716801",
+                                "subtype": "refund_fees",
+                                "amount": {
+                                    "currency": "EUR",
+                                    "amount": 0
+                                }
+                            },
+                            {
+                                "type": "FOREX_FEE",
+                                "type": "FOREX_FEE",
+                                "amount": {
+                                    "currency": "EUR",
+                                    "amount": 0
+                                }
+                            }
+                        ],
+                        "authCode": "      ",
+                        "reasonCode": "",
+                        "billingAmount": {
+                            "currency": "EUR",
+                            "amount": 1000
+                        },
+                        "transactionAmount": {
+                            "currency": "EUR",
+                            "amount": 1000
+                        },
+                        "reversal": false,
+                        "type": "REFUND",
+                        "timestamp": 1781866389223,
+                        "processedTimestamp": 1781866387938
+                    }
+                ],
+                "id": "116776395604164609",
+                "displayAmount": {
+                    "currency": "EUR",
+                    "amount": 1000
+                },
+                "profileId": "116776343445569793",
+                "creationTimestamp": 1781866388327,
+                "lastUpdatedTimestamp": 1781866389223
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 1000
+            },
+            "id": "116776395604164609",
+            "type": "card_payments",
+            "direction": "CREDIT"
+        },
+        {
+            "creationTimestamp": 1781866388327,
+            "lastUpdatedTimestamp": 1781866394598,
+            "status": "COMPLETED",
+            "transaction": {
+                "creationTimestamp": 1781866388327,
+                "instrument": {
+                    "id": "116776348235988993",
+                    "type": "managed_cards"
+                },
+                "lastUpdatedTimestamp": 1781866394598,
+                "status": "COMPLETED",
+                "feeType": "purchase_fees",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 10
+                },
+                "relatedTransactionId": "116776395604164609",
+                "id": "116776395604164609"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 10
+            },
+            "id": "116776395604164609",
+            "type": "fees",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781866388327,
+            "lastUpdatedTimestamp": 1781866394598,
+            "status": "COMPLETED",
+            "transaction": {
+                "creationTimestamp": 1781866388327,
+                "instrument": {
+                    "id": "116776348235988993",
+                    "type": "managed_cards"
+                },
+                "lastUpdatedTimestamp": 1781866394598,
+                "status": "COMPLETED",
+                "feeType": "refund_fees",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 5
+                },
+                "relatedTransactionId": "116776395604164609",
+                "id": "116776395604164609"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 5
+            },
+            "id": "116776395604164609",
+            "type": "fees",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865977856,
+            "lastUpdatedTimestamp": 1781865982416,
+            "status": "CANCELLED",
+            "transaction": {
+                "type": "PURCHASE",
+                "card": {
+                    "type": "managed_cards",
+                    "parentManagedAccountId": "116776347499233281",
+                    "nameOnCard": "name on card",
+                    "cardNumberFirstSix": "522093",
+                    "friendlyName": "Project Acme Card",
+                    "cardNumberLastFour": "4351",
+                    "mode": "debit",
+                    "cardBrand": "MASTERCARD",
+                    "id": "116776348235988993"
+                },
+                "merchant": {
+                    "categoryCode": "5399",
+                    "country": "MT",
+                    "name": "Amazon IT"
+                },
+                "status": "DECLINED",
+                "events": [
+                    {
+                        "type": "AUTHORISATION",
+                        "id": "116776368769400833",
+                        "subtype": "sale_purchases",
+                        "fees": [],
+                        "cancellationReason": "",
+                        "authCode": "624952",
+                        "result": "DECLINED",
+                        "declineReason": "TIMEOUT",
+                        "authorisationCategory": "FINAL_AUTH",
+                        "billingAmount": {
+                            "currency": "EUR",
+                            "amount": 500
+                        },
+                        "transactionAmount": {
+                            "currency": "EUR",
+                            "amount": 500
+                        },
+                        "authRuleFailedReason": "NOT_SPEND_CONTROL_RULE_FAILURE",
+                        "reversal": false,
+                        "type": "AUTHORISATION",
+                        "timestamp": 1781865977856,
+                        "processedTimestamp": 1781865977082
+                    }
+                ],
+                "id": "116776368767107073",
+                "displayAmount": {
+                    "currency": "EUR",
+                    "amount": 500
+                },
+                "profileId": "116776343445569793",
+                "creationTimestamp": 1781865977856,
+                "lastUpdatedTimestamp": 1781865977856
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 500
+            },
+            "id": "116776368767107073",
+            "type": "card_payments",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865957664,
+            "fee": {
+                "id": "116776367709945857",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 10
+                }
+            },
+            "lastUpdatedTimestamp": 1781865972516,
             "status": "COMPLETED",
             "transaction": {
                 "type": "PURCHASE",
                 "card": {
                     "type": "managed_cards",
-                    "parentManagedAccountId": "116771462157238273",
+                    "parentManagedAccountId": "116776347499233281",
                     "nameOnCard": "name on card",
                     "cardNumberFirstSix": "522093",
                     "friendlyName": "Project Acme Card",
-                    "cardNumberLastFour": "9134",
+                    "cardNumberLastFour": "4351",
                     "mode": "debit",
                     "cardBrand": "MASTERCARD",
-                    "id": "116771462546194433"
+                    "id": "116776348235988993"
                 },
                 "merchant": {
                     "categoryCode": "5399",
@@ -27,7 +306,7 @@
                 "events": [
                     {
                         "type": "AUTHORISATION",
-                        "id": "116771485364649985",
+                        "id": "116776367711125505",
                         "forex": {
                             "exchangeRate": {
                                 "scale": 7,
@@ -50,7 +329,7 @@
                             }
                         ],
                         "cancellationReason": "",
-                        "authCode": "906173",
+                        "authCode": "850924",
                         "result": "APPROVED",
                         "authorisationCategory": "FINAL_AUTH",
                         "billingAmount": {
@@ -64,12 +343,12 @@
                         "authRuleFailedReason": "NOT_SPEND_CONTROL_RULE_FAILURE",
                         "reversal": false,
                         "type": "AUTHORISATION",
-                        "timestamp": 1781791463668,
-                        "processedTimestamp": 1781791457302
+                        "timestamp": 1781865957664,
+                        "processedTimestamp": 1781865952714
                     },
                     {
                         "type": "SETTLEMENT",
-                        "id": "116771485364650497",
+                        "id": "116776367711126017",
                         "exchangeRate": {
                             "scale": 7,
                             "value": 8665511
@@ -77,25 +356,25 @@
                         "subtype": "sale_purchases",
                         "fees": [
                             {
+                                "type": "PLATFORM_FEE",
+                                "type": "PLATFORM_FEE",
+                                "id": "116776366831304705",
+                                "subtype": "purchase_fees",
+                                "amount": {
+                                    "currency": "EUR",
+                                    "amount": 34
+                                }
+                            },
+                            {
                                 "type": "FOREX_FEE",
                                 "type": "FOREX_FEE",
                                 "amount": {
                                     "currency": "EUR",
                                     "amount": 23
                                 }
-                            },
-                            {
-                                "type": "PLATFORM_FEE",
-                                "type": "PLATFORM_FEE",
-                                "id": "116771484700442625",
-                                "subtype": "purchase_fees",
-                                "amount": {
-                                    "currency": "EUR",
-                                    "amount": 34
-                                }
                             }
                         ],
-                        "authCode": "906173",
+                        "authCode": "850924",
                         "settlementState": "COMPLETED",
                         "billingAmount": {
                             "currency": "EUR",
@@ -107,71 +386,143 @@
                         },
                         "reversal": false,
                         "type": "SETTLEMENT",
-                        "processedTimestamp": 1781791457655,
-                        "timestamp": 1781791464417
+                        "processedTimestamp": 1781865953060,
+                        "timestamp": 1781865960092
                     }
                 ],
-                "id": "116771485363601409",
+                "id": "116776367709945857",
                 "displayAmount": {
                     "currency": "EUR",
                     "amount": 1154
                 },
-                "profileId": "116771459587178753",
-                "creationTimestamp": 1781791463668,
-                "lastUpdatedTimestamp": 1781791464417
+                "profileId": "116776343445569793",
+                "creationTimestamp": 1781865957664,
+                "lastUpdatedTimestamp": 1781865960092
             },
             "amount": {
                 "currency": "EUR",
-                "amount": 1211
+                "amount": 1188
             },
-            "id": "116771485363601409",
+            "id": "116776367709945857",
             "type": "card_payments",
             "direction": "DEBIT"
         },
         {
-            "creationTimestamp": 1781791463668,
-            "lastUpdatedTimestamp": 1781791476983,
+            "creationTimestamp": 1781865957664,
+            "lastUpdatedTimestamp": 1781865972727,
             "status": "COMPLETED",
             "transaction": {
-                "creationTimestamp": 1781791463668,
+                "creationTimestamp": 1781865957664,
                 "instrument": {
-                    "id": "116771462546194433",
+                    "id": "116776348235988993",
                     "type": "managed_cards"
                 },
-                "lastUpdatedTimestamp": 1781791476983,
+                "lastUpdatedTimestamp": 1781865972727,
                 "status": "COMPLETED",
                 "feeType": "purchase_fees",
                 "amount": {
                     "currency": "GBP",
                     "amount": 10
                 },
-                "relatedTransactionId": "116771485363601409",
-                "id": "116771485363601409"
+                "relatedTransactionId": "116776367709945857",
+                "id": "116776367709945857"
             },
             "amount": {
                 "currency": "GBP",
                 "amount": 10
             },
-            "id": "116771485363601409",
+            "id": "116776367709945857",
             "type": "fees",
             "direction": "DEBIT"
         },
         {
-            "creationTimestamp": 1781791460805,
-            "lastUpdatedTimestamp": 1781791474931,
+            "creationTimestamp": 1781865955439,
+            "lastUpdatedTimestamp": 1781865965930,
+            "status": "PROCESSING",
+            "transaction": {
+                "type": "PURCHASE",
+                "card": {
+                    "type": "managed_cards",
+                    "parentManagedAccountId": "116776347499233281",
+                    "nameOnCard": "name on card",
+                    "cardNumberFirstSix": "522093",
+                    "friendlyName": "Project Acme Card",
+                    "cardNumberLastFour": "4351",
+                    "mode": "debit",
+                    "cardBrand": "MASTERCARD",
+                    "id": "116776348235988993"
+                },
+                "merchant": {
+                    "categoryCode": "5399",
+                    "country": "MT",
+                    "name": "Amazon IT"
+                },
+                "status": "PENDING",
+                "events": [
+                    {
+                        "type": "AUTHORISATION",
+                        "id": "116776367679799297",
+                        "subtype": "sale_purchases",
+                        "fees": [],
+                        "cancellationReason": "",
+                        "authCode": "639643",
+                        "result": "APPROVED",
+                        "authorisationCategory": "FINAL_AUTH",
+                        "billingAmount": {
+                            "currency": "EUR",
+                            "amount": 500
+                        },
+                        "transactionAmount": {
+                            "currency": "EUR",
+                            "amount": 500
+                        },
+                        "authRuleFailedReason": "NOT_SPEND_CONTROL_RULE_FAILURE",
+                        "reversal": false,
+                        "type": "AUTHORISATION",
+                        "timestamp": 1781865955439,
+                        "processedTimestamp": 1781865952297
+                    }
+                ],
+                "id": "116776367678357505",
+                "displayAmount": {
+                    "currency": "EUR",
+                    "amount": 500
+                },
+                "profileId": "116776343445569793",
+                "creationTimestamp": 1781865955439,
+                "lastUpdatedTimestamp": 1781865955439
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 500
+            },
+            "id": "116776367678357505",
+            "type": "card_payments",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865954321,
+            "fee": {
+                "id": "116776367256895489",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 10
+                }
+            },
+            "lastUpdatedTimestamp": 1781865964790,
             "status": "COMPLETED",
             "transaction": {
                 "type": "PURCHASE",
                 "card": {
                     "type": "managed_cards",
-                    "parentManagedAccountId": "116771462157238273",
+                    "parentManagedAccountId": "116776347499233281",
                     "nameOnCard": "name on card",
                     "cardNumberFirstSix": "522093",
                     "friendlyName": "Project Acme Card",
-                    "cardNumberLastFour": "9134",
+                    "cardNumberLastFour": "4351",
                     "mode": "debit",
                     "cardBrand": "MASTERCARD",
-                    "id": "116771462546194433"
+                    "id": "116776348235988993"
                 },
                 "merchant": {
                     "categoryCode": "5399",
@@ -182,11 +533,11 @@
                 "events": [
                     {
                         "type": "AUTHORISATION",
-                        "id": "116771485333454849",
+                        "id": "116776367261876225",
                         "subtype": "sale_purchases",
                         "fees": [],
                         "cancellationReason": "",
-                        "authCode": "588495",
+                        "authCode": "675135",
                         "result": "APPROVED",
                         "authorisationCategory": "FINAL_AUTH",
                         "billingAmount": {
@@ -200,34 +551,34 @@
                         "authRuleFailedReason": "NOT_SPEND_CONTROL_RULE_FAILURE",
                         "reversal": false,
                         "type": "AUTHORISATION",
-                        "timestamp": 1781791460805,
-                        "processedTimestamp": 1781791456836
+                        "timestamp": 1781865954321,
+                        "processedTimestamp": 1781865951928
                     },
                     {
                         "type": "SETTLEMENT",
-                        "id": "116771485333455105",
+                        "id": "116776367261876481",
                         "subtype": "sale_purchases",
                         "fees": [
                             {
-                                "type": "FOREX_FEE",
-                                "type": "FOREX_FEE",
+                                "type": "PLATFORM_FEE",
+                                "type": "PLATFORM_FEE",
+                                "id": "116776366775533569",
+                                "subtype": "purchase_fees",
                                 "amount": {
                                     "currency": "EUR",
                                     "amount": 0
                                 }
                             },
                             {
-                                "type": "PLATFORM_FEE",
-                                "type": "PLATFORM_FEE",
-                                "id": "116771484666167297",
-                                "subtype": "purchase_fees",
+                                "type": "FOREX_FEE",
+                                "type": "FOREX_FEE",
                                 "amount": {
                                     "currency": "EUR",
                                     "amount": 0
                                 }
                             }
                         ],
-                        "authCode": "588495",
+                        "authCode": "675135",
                         "settlementState": "COMPLETED",
                         "billingAmount": {
                             "currency": "EUR",
@@ -239,270 +590,78 @@
                         },
                         "reversal": false,
                         "type": "SETTLEMENT",
-                        "processedTimestamp": 1781791456836,
-                        "timestamp": 1781791461315
-                    },
-                    {
-                        "type": "REFUND",
-                        "id": "116771485333455873",
-                        "subtype": "purchase_refunds",
-                        "fees": [
-                            {
-                                "type": "FOREX_FEE",
-                                "type": "FOREX_FEE",
-                                "amount": {
-                                    "currency": "EUR",
-                                    "amount": 0
-                                }
-                            },
-                            {
-                                "type": "PLATFORM_FEE",
-                                "type": "PLATFORM_FEE",
-                                "id": "116771484668067841",
-                                "subtype": "refund_fees",
-                                "amount": {
-                                    "currency": "EUR",
-                                    "amount": 0
-                                }
-                            }
-                        ],
-                        "authCode": "      ",
-                        "reasonCode": "",
-                        "billingAmount": {
-                            "currency": "EUR",
-                            "amount": 100
-                        },
-                        "transactionAmount": {
-                            "currency": "EUR",
-                            "amount": 100
-                        },
-                        "reversal": false,
-                        "type": "REFUND",
-                        "timestamp": 1781791461906,
-                        "processedTimestamp": 1781791457189
+                        "processedTimestamp": 1781865952209,
+                        "timestamp": 1781865954766
                     }
                 ],
-                "id": "116771485331947521",
+                "id": "116776367256895489",
                 "displayAmount": {
                     "currency": "EUR",
                     "amount": 100
                 },
-                "profileId": "116771459587178753",
-                "creationTimestamp": 1781791460805,
-                "lastUpdatedTimestamp": 1781791461906
+                "profileId": "116776343445569793",
+                "creationTimestamp": 1781865954321,
+                "lastUpdatedTimestamp": 1781865954766
             },
             "amount": {
                 "currency": "EUR",
                 "amount": 100
             },
-            "id": "116771485331947521",
+            "id": "116776367256895489",
             "type": "card_payments",
             "direction": "DEBIT"
         },
         {
-            "creationTimestamp": 1781791460805,
-            "lastUpdatedTimestamp": 1781791474931,
+            "creationTimestamp": 1781865954321,
+            "lastUpdatedTimestamp": 1781865964958,
             "status": "COMPLETED",
             "transaction": {
-                "creationTimestamp": 1781791460805,
+                "creationTimestamp": 1781865954321,
                 "instrument": {
-                    "id": "116771462546194433",
+                    "id": "116776348235988993",
                     "type": "managed_cards"
                 },
-                "lastUpdatedTimestamp": 1781791474931,
+                "lastUpdatedTimestamp": 1781865964958,
                 "status": "COMPLETED",
                 "feeType": "purchase_fees",
                 "amount": {
                     "currency": "EUR",
                     "amount": 10
                 },
-                "relatedTransactionId": "116771485331947521",
-                "id": "116771485331947521"
+                "relatedTransactionId": "116776367256895489",
+                "id": "116776367256895489"
             },
             "amount": {
                 "currency": "EUR",
                 "amount": 10
             },
-            "id": "116771485331947521",
+            "id": "116776367256895489",
             "type": "fees",
             "direction": "DEBIT"
         },
         {
-            "creationTimestamp": 1781791460805,
-            "lastUpdatedTimestamp": 1781791474931,
-            "status": "COMPLETED",
-            "transaction": {
-                "creationTimestamp": 1781791460805,
-                "instrument": {
-                    "id": "116771462546194433",
-                    "type": "managed_cards"
-                },
-                "lastUpdatedTimestamp": 1781791474931,
-                "status": "COMPLETED",
-                "feeType": "refund_fees",
-                "amount": {
-                    "currency": "EUR",
-                    "amount": 5
-                },
-                "relatedTransactionId": "116771485331947521",
-                "id": "116771485331947521"
-            },
-            "amount": {
-                "currency": "EUR",
-                "amount": 5
-            },
-            "id": "116771485331947521",
-            "type": "fees",
-            "direction": "DEBIT"
-        },
-        {
-            "creationTimestamp": 1781791458810,
-            "lastUpdatedTimestamp": 1781791465494,
-            "status": "COMPLETED",
-            "transaction": {
-                "type": "PURCHASE",
-                "card": {
-                    "type": "managed_cards",
-                    "parentManagedAccountId": "116771462157238273",
-                    "nameOnCard": "name on card",
-                    "cardNumberFirstSix": "522093",
-                    "friendlyName": "Project Acme Card",
-                    "cardNumberLastFour": "9134",
-                    "mode": "debit",
-                    "cardBrand": "MASTERCARD",
-                    "id": "116771462546194433"
-                },
-                "merchant": {
-                    "categoryCode": "5399",
-                    "country": "MT",
-                    "name": "Etsy DE"
-                },
-                "status": "SETTLED",
-                "events": [
-                    {
-                        "type": "AUTHORISATION",
-                        "id": "116771484962455553",
-                        "subtype": "sale_purchases",
-                        "fees": [],
-                        "cancellationReason": "",
-                        "authCode": "984645",
-                        "result": "APPROVED",
-                        "authorisationCategory": "FINAL_AUTH",
-                        "billingAmount": {
-                            "currency": "EUR",
-                            "amount": 100
-                        },
-                        "transactionAmount": {
-                            "currency": "EUR",
-                            "amount": 100
-                        },
-                        "authRuleFailedReason": "NOT_SPEND_CONTROL_RULE_FAILURE",
-                        "reversal": false,
-                        "type": "AUTHORISATION",
-                        "timestamp": 1781791458810,
-                        "processedTimestamp": 1781791456432
-                    },
-                    {
-                        "type": "SETTLEMENT",
-                        "id": "116771484962455809",
-                        "subtype": "sale_purchases",
-                        "fees": [
-                            {
-                                "type": "FOREX_FEE",
-                                "type": "FOREX_FEE",
-                                "amount": {
-                                    "currency": "EUR",
-                                    "amount": 0
-                                }
-                            },
-                            {
-                                "type": "PLATFORM_FEE",
-                                "type": "PLATFORM_FEE",
-                                "id": "116771484639166465",
-                                "subtype": "purchase_fees",
-                                "amount": {
-                                    "currency": "EUR",
-                                    "amount": 0
-                                }
-                            }
-                        ],
-                        "authCode": "984645",
-                        "settlementState": "COMPLETED",
-                        "billingAmount": {
-                            "currency": "EUR",
-                            "amount": 100
-                        },
-                        "transactionAmount": {
-                            "currency": "EUR",
-                            "amount": 100
-                        },
-                        "reversal": false,
-                        "type": "SETTLEMENT",
-                        "processedTimestamp": 1781791456720,
-                        "timestamp": 1781791459126
-                    }
-                ],
-                "id": "116771484960555009",
-                "displayAmount": {
-                    "currency": "EUR",
-                    "amount": 100
-                },
-                "profileId": "116771459587178753",
-                "creationTimestamp": 1781791458810,
-                "lastUpdatedTimestamp": 1781791459126
-            },
-            "amount": {
-                "currency": "EUR",
-                "amount": 100
-            },
-            "id": "116771484960555009",
-            "type": "card_payments",
-            "direction": "DEBIT"
-        },
-        {
-            "creationTimestamp": 1781791458810,
-            "lastUpdatedTimestamp": 1781791465494,
-            "status": "COMPLETED",
-            "transaction": {
-                "creationTimestamp": 1781791458810,
-                "instrument": {
-                    "id": "116771462546194433",
-                    "type": "managed_cards"
-                },
-                "lastUpdatedTimestamp": 1781791465494,
-                "status": "COMPLETED",
-                "feeType": "purchase_fees",
+            "creationTimestamp": 1781865952206,
+            "fee": {
+                "id": "116776367090434049",
                 "amount": {
                     "currency": "EUR",
                     "amount": 10
-                },
-                "relatedTransactionId": "116771484960555009",
-                "id": "116771484960555009"
+                }
             },
-            "amount": {
-                "currency": "EUR",
-                "amount": 10
-            },
-            "id": "116771484960555009",
-            "type": "fees",
-            "direction": "DEBIT"
-        },
-        {
-            "creationTimestamp": 1781791456709,
-            "lastUpdatedTimestamp": 1781791463828,
+            "lastUpdatedTimestamp": 1781865962169,
             "status": "COMPLETED",
             "transaction": {
                 "type": "PURCHASE",
                 "card": {
                     "type": "managed_cards",
-                    "parentManagedAccountId": "116771462157238273",
+                    "parentManagedAccountId": "116776347499233281",
                     "nameOnCard": "name on card",
                     "cardNumberFirstSix": "522093",
                     "friendlyName": "Project Acme Card",
-                    "cardNumberLastFour": "9134",
+                    "cardNumberLastFour": "4351",
                     "mode": "debit",
                     "cardBrand": "MASTERCARD",
-                    "id": "116771462546194433"
+                    "id": "116776348235988993"
                 },
                 "merchant": {
                     "categoryCode": "5399",
@@ -513,11 +672,11 @@
                 "events": [
                     {
                         "type": "AUTHORISATION",
-                        "id": "116771484882632705",
+                        "id": "116776367094497281",
                         "subtype": "sale_purchases",
                         "fees": [],
                         "cancellationReason": "",
-                        "authCode": "932693",
+                        "authCode": "203883",
                         "result": "APPROVED",
                         "authorisationCategory": "FINAL_AUTH",
                         "billingAmount": {
@@ -531,34 +690,34 @@
                         "authRuleFailedReason": "NOT_SPEND_CONTROL_RULE_FAILURE",
                         "reversal": false,
                         "type": "AUTHORISATION",
-                        "timestamp": 1781791456709,
-                        "processedTimestamp": 1781791455987
+                        "timestamp": 1781865952206,
+                        "processedTimestamp": 1781865950492
                     },
                     {
                         "type": "SETTLEMENT",
-                        "id": "116771484882632961",
+                        "id": "116776367094562817",
                         "subtype": "sale_purchases",
                         "fees": [
                             {
-                                "type": "FOREX_FEE",
-                                "type": "FOREX_FEE",
+                                "type": "PLATFORM_FEE",
+                                "type": "PLATFORM_FEE",
+                                "id": "116776366735425537",
+                                "subtype": "purchase_fees",
                                 "amount": {
                                     "currency": "EUR",
                                     "amount": 0
                                 }
                             },
                             {
-                                "type": "PLATFORM_FEE",
-                                "type": "PLATFORM_FEE",
-                                "id": "116771484610002945",
-                                "subtype": "purchase_fees",
+                                "type": "FOREX_FEE",
+                                "type": "FOREX_FEE",
                                 "amount": {
                                     "currency": "EUR",
                                     "amount": 0
                                 }
                             }
                         ],
-                        "authCode": "932693",
+                        "authCode": "203883",
                         "settlementState": "COMPLETED",
                         "billingAmount": {
                             "currency": "EUR",
@@ -570,71 +729,78 @@
                         },
                         "reversal": false,
                         "type": "SETTLEMENT",
-                        "processedTimestamp": 1781791456275,
-                        "timestamp": 1781791457116
+                        "processedTimestamp": 1781865951597,
+                        "timestamp": 1781865952585
                     }
                 ],
-                "id": "116771484860874753",
+                "id": "116776367090434049",
                 "displayAmount": {
                     "currency": "EUR",
                     "amount": 100
                 },
-                "profileId": "116771459587178753",
-                "creationTimestamp": 1781791456709,
-                "lastUpdatedTimestamp": 1781791457116
+                "profileId": "116776343445569793",
+                "creationTimestamp": 1781865952206,
+                "lastUpdatedTimestamp": 1781865952585
             },
             "amount": {
                 "currency": "EUR",
                 "amount": 100
             },
-            "id": "116771484860874753",
+            "id": "116776367090434049",
             "type": "card_payments",
             "direction": "DEBIT"
         },
         {
-            "creationTimestamp": 1781791456709,
-            "lastUpdatedTimestamp": 1781791463828,
+            "creationTimestamp": 1781865952206,
+            "lastUpdatedTimestamp": 1781865962419,
             "status": "COMPLETED",
             "transaction": {
-                "creationTimestamp": 1781791456709,
+                "creationTimestamp": 1781865952206,
                 "instrument": {
-                    "id": "116771462546194433",
+                    "id": "116776348235988993",
                     "type": "managed_cards"
                 },
-                "lastUpdatedTimestamp": 1781791463828,
+                "lastUpdatedTimestamp": 1781865962419,
                 "status": "COMPLETED",
                 "feeType": "purchase_fees",
                 "amount": {
                     "currency": "EUR",
                     "amount": 10
                 },
-                "relatedTransactionId": "116771484860874753",
-                "id": "116771484860874753"
+                "relatedTransactionId": "116776367090434049",
+                "id": "116776367090434049"
             },
             "amount": {
                 "currency": "EUR",
                 "amount": 10
             },
-            "id": "116771484860874753",
+            "id": "116776367090434049",
             "type": "fees",
             "direction": "DEBIT"
         },
         {
-            "creationTimestamp": 1781791164365,
-            "lastUpdatedTimestamp": 1781791183850,
+            "creationTimestamp": 1781865745097,
+            "fee": {
+                "id": "116776353639235585",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 10
+                }
+            },
+            "lastUpdatedTimestamp": 1781865751484,
             "status": "COMPLETED",
             "transaction": {
                 "type": "PURCHASE",
                 "card": {
                     "type": "managed_cards",
-                    "parentManagedAccountId": "116771462157238273",
+                    "parentManagedAccountId": "116776347499233281",
                     "nameOnCard": "name on card",
                     "cardNumberFirstSix": "522093",
                     "friendlyName": "Project Acme Card",
-                    "cardNumberLastFour": "9134",
+                    "cardNumberLastFour": "4351",
                     "mode": "debit",
                     "cardBrand": "MASTERCARD",
-                    "id": "116771462546194433"
+                    "id": "116776348235988993"
                 },
                 "merchant": {
                     "categoryCode": "5399",
@@ -645,53 +811,30 @@
                 "status": "SETTLED",
                 "events": [
                     {
-                        "type": "AUTHORISATION",
-                        "id": "116771465686614529",
-                        "subtype": "sale_purchases",
-                        "fees": [],
-                        "cancellationReason": "",
-                        "authCode": "712748",
-                        "result": "APPROVED",
-                        "authorisationCategory": "FINAL_AUTH",
-                        "billingAmount": {
-                            "currency": "EUR",
-                            "amount": 5000
-                        },
-                        "transactionAmount": {
-                            "currency": "EUR",
-                            "amount": 5000
-                        },
-                        "authRuleFailedReason": "NOT_SPEND_CONTROL_RULE_FAILURE",
-                        "reversal": false,
-                        "type": "AUTHORISATION",
-                        "timestamp": 1781791164365,
-                        "processedTimestamp": 1781791163773
-                    },
-                    {
                         "type": "SETTLEMENT",
-                        "id": "116771466779492353",
+                        "id": "116776353641005057",
                         "subtype": "sale_purchases",
                         "fees": [
                             {
-                                "type": "FOREX_FEE",
-                                "type": "FOREX_FEE",
+                                "type": "PLATFORM_FEE",
+                                "type": "PLATFORM_FEE",
+                                "id": "116776353157087233",
+                                "subtype": "purchase_fees",
                                 "amount": {
                                     "currency": "EUR",
                                     "amount": 0
                                 }
                             },
                             {
-                                "type": "PLATFORM_FEE",
-                                "type": "PLATFORM_FEE",
-                                "id": "116771466399973377",
-                                "subtype": "purchase_fees",
+                                "type": "FOREX_FEE",
+                                "type": "FOREX_FEE",
                                 "amount": {
                                     "currency": "EUR",
                                     "amount": 0
                                 }
                             }
                         ],
-                        "authCode": "712748",
+                        "authCode": "343381",
                         "settlementState": "COMPLETED",
                         "billingAmount": {
                             "currency": "EUR",
@@ -703,55 +846,122 @@
                         },
                         "reversal": false,
                         "type": "SETTLEMENT",
-                        "processedTimestamp": 1781791178412,
-                        "timestamp": 1781791178502
+                        "processedTimestamp": 1781865744408,
+                        "timestamp": 1781865745097
                     }
                 ],
-                "id": "116771465685303297",
+                "id": "116776353639235585",
                 "displayAmount": {
                     "currency": "EUR",
                     "amount": 5000
                 },
-                "profileId": "116771459587178753",
-                "creationTimestamp": 1781791164365,
-                "lastUpdatedTimestamp": 1781791178502
+                "profileId": "116776343445569793",
+                "creationTimestamp": 1781865745097,
+                "lastUpdatedTimestamp": 1781865745097
             },
             "amount": {
                 "currency": "EUR",
                 "amount": 5000
             },
-            "id": "116771465685303297",
+            "id": "116776353639235585",
             "type": "card_payments",
             "direction": "DEBIT"
         },
         {
-            "creationTimestamp": 1781791164365,
-            "lastUpdatedTimestamp": 1781791183850,
+            "creationTimestamp": 1781865745097,
+            "lastUpdatedTimestamp": 1781865751484,
             "status": "COMPLETED",
             "transaction": {
-                "creationTimestamp": 1781791164365,
+                "creationTimestamp": 1781865745097,
                 "instrument": {
-                    "id": "116771462546194433",
+                    "id": "116776348235988993",
                     "type": "managed_cards"
                 },
-                "lastUpdatedTimestamp": 1781791183850,
+                "lastUpdatedTimestamp": 1781865751484,
                 "status": "COMPLETED",
                 "feeType": "purchase_fees",
                 "amount": {
                     "currency": "EUR",
                     "amount": 10
                 },
-                "relatedTransactionId": "116771465685303297",
-                "id": "116771465685303297"
+                "relatedTransactionId": "116776353639235585",
+                "id": "116776353639235585"
             },
             "amount": {
                 "currency": "EUR",
                 "amount": 10
             },
-            "id": "116771465685303297",
+            "id": "116776353639235585",
             "type": "fees",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865731627,
+            "lastUpdatedTimestamp": 1781865734138,
+            "status": "CANCELLED",
+            "transaction": {
+                "type": "PURCHASE",
+                "card": {
+                    "type": "managed_cards",
+                    "parentManagedAccountId": "116776347499233281",
+                    "nameOnCard": "name on card",
+                    "cardNumberFirstSix": "522093",
+                    "friendlyName": "Project Acme Card",
+                    "cardNumberLastFour": "4351",
+                    "mode": "debit",
+                    "cardBrand": "MASTERCARD",
+                    "id": "116776348235988993"
+                },
+                "merchant": {
+                    "categoryCode": "5399",
+                    "country": "MT",
+                    "id": "1234",
+                    "name": "Sample Merchant"
+                },
+                "status": "DECLINED",
+                "events": [
+                    {
+                        "type": "AUTHORISATION",
+                        "id": "116776352506445825",
+                        "subtype": "sale_purchases",
+                        "fees": [],
+                        "cancellationReason": "",
+                        "authCode": "188138",
+                        "result": "DECLINED",
+                        "declineReason": "AUTH_RULE_CHECKS_FAILED",
+                        "authorisationCategory": "FINAL_AUTH",
+                        "billingAmount": {
+                            "currency": "EUR",
+                            "amount": 5000
+                        },
+                        "transactionAmount": {
+                            "currency": "EUR",
+                            "amount": 5000
+                        },
+                        "authRuleFailedReason": "SPEND_CONTROL_RULE_FAILURE",
+                        "reversal": false,
+                        "type": "AUTHORISATION",
+                        "timestamp": 1781865731627,
+                        "processedTimestamp": 1781865729526
+                    }
+                ],
+                "id": "116776352502120449",
+                "displayAmount": {
+                    "currency": "EUR",
+                    "amount": 5000
+                },
+                "profileId": "116776343445569793",
+                "creationTimestamp": 1781865731627,
+                "lastUpdatedTimestamp": 1781865731627
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 5000
+            },
+            "id": "116776352502120449",
+            "type": "card_payments",
             "direction": "DEBIT"
         }
     ],
-    "count": 11
+    "count": 14
 }
