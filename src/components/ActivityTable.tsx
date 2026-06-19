@@ -67,7 +67,8 @@ function ActivityRow({ tx }: { tx: ActivityTransaction }) {
         </td>
         <td className={`num amount ${credit ? 'credit' : 'debit'}`}>
           <span className={`amount-value${refunded ? ' refunded' : ''}`} title={refunded ? 'Refunded' : undefined}>
-            {credit ? '+' : '−'}{formatMoney(tx.amount)}
+            {/* Refunded amounts carry no sign — the strikethrough conveys the reversal. */}
+            {refunded ? formatMoney(tx.amount) : `${credit ? '+' : '−'}${formatMoney(tx.amount)}`}
           </span>
           <ChevronIcon />
         </td>
