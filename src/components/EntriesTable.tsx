@@ -7,7 +7,7 @@ import type {
   MerchantCounterparty,
 } from '../api/types';
 import { formatMoney, formatTimestamp } from '../format';
-import { transactionLabel, categoryTone } from '../labels';
+import { transactionLabel, categoryTone, feeLabel } from '../labels';
 import { EntryDetailPanel } from './EntryDetailPanel';
 
 interface Props {
@@ -71,6 +71,19 @@ function counterpartyDisplay(cp: Counterparty | undefined): CounterpartyDisplay 
   };
 }
 
+// Fees carry no counterparty on the wire, but the fee type + the transaction they
+// relate to are the meaningful identity. Render them the same way the activity view
+// does (subtype label + "re <related>") so fees look identical across both views.
+function feeCounterparty(subtype: string | undefined, relatedEntryId: string | undefined): CounterpartyDisplay {
+  const primary = feeLabel(subtype);
+  return {
+    primary,
+    secondary: relatedEntryId ? `re ${relatedEntryId}` : undefined,
+    tone: 'instrument',
+    initial: firstAlphaChar(primary),
+  };
+}
+
 function ChevronIcon() {
   return (
     <svg className="chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -81,7 +94,10 @@ function ChevronIcon() {
 
 function EntryRow({ entry }: { entry: StatementEntry }) {
   const [expanded, setExpanded] = useState(false);
-  const cp = counterpartyDisplay(entry.counterparty);
+  const isFee = entry.transaction.type === 'fees';
+  const cp = isFee
+    ? feeCounterparty(entry.transaction.subtype, entry.relatedEntryId)
+    : counterpartyDisplay(entry.counterparty);
   const tone = categoryTone(entry.transaction.type);
   const credit = entry.balanceAdjustment.amount >= 0;
 
@@ -111,7 +127,9 @@ function EntryRow({ entry }: { entry: StatementEntry }) {
         <td>
           <span className={`type-badge tone-${tone}`}>
             <span className="type-badge-dot" aria-hidden="true" />
-            {transactionLabel(entry.transaction.type, entry.transaction.subtype)}
+            {isFee
+              ? transactionLabel(entry.transaction.type)
+              : transactionLabel(entry.transaction.type, entry.transaction.subtype)}
           </span>
         </td>
         <td className="cp-cell">

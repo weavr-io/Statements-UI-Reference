@@ -93,3 +93,11 @@ export function transactionLabel(type: TransactionType, subtype?: string): strin
   const sub = SUBTYPE_LABEL[subtype] ?? humanise(subtype);
   return `${main} · ${sub}`;
 }
+
+/** Label for a fee, derived from its subtype (e.g. "Transfer fee"). Falls back to a
+ * humanised subtype, or "Fee" when no subtype is present. Shared by the statement
+ * and activity views so the two render fees identically. */
+export function feeLabel(subtype?: string): string {
+  if (!subtype) return 'Fee';
+  return SUBTYPE_LABEL[subtype] ?? humanise(subtype);
+}

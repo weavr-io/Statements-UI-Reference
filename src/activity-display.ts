@@ -15,7 +15,7 @@ import type {
   SystemTransactionActivity,
   TransferActivity,
 } from './api/activity-types';
-import { SUBTYPE_LABEL } from './labels';
+import { SUBTYPE_LABEL, feeLabel } from './labels';
 
 export type InstrumentType = 'managed_accounts' | 'managed_cards';
 
@@ -81,8 +81,7 @@ export function activityCounterparty(tx: ActivityTransaction): CounterpartyDispl
     }
     case 'fees': {
       const p = tx.transaction as FeeActivity;
-      const label = SUBTYPE_LABEL[p.feeType] ?? humanise(p.feeType ?? 'Fee');
-      return display(label, 'instrument', p.relatedTransactionId ? `re ${p.relatedTransactionId}` : undefined);
+      return display(feeLabel(p.feeType), 'instrument', p.relatedTransactionId ? `re ${p.relatedTransactionId}` : undefined);
     }
     case 'system_transactions': {
       const p = tx.transaction as SystemTransactionActivity;
