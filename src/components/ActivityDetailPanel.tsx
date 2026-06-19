@@ -52,11 +52,45 @@ function identifierItems(tx: ActivityTransaction): Item[] {
   return items;
 }
 
+/* The transaction's own lifecycle status, distinct from the envelope `status`
+ * (which is the ledger-entry status). Card payments expose `status` (e.g. SETTLED),
+ * money movements expose `state` (e.g. COMPLETED), and fees/system expose `status`
+ * (e.g. REVERSED for a fee reversal — which the envelope reports as COMPLETED). */
+function lifecycleStatusItem(tx: ActivityTransaction): Item | null {
+  switch (tx.type) {
+    case 'card_payments': {
+      const p = tx.transaction as CardPaymentActivity;
+      return p.status ? { label: 'Card status', value: p.status } : null;
+    }
+    case 'sends':
+      return stateItem((tx.transaction as SendActivity).state);
+    case 'transfers':
+      return stateItem((tx.transaction as TransferActivity).state);
+    case 'outgoing_wire_transfers':
+      return stateItem((tx.transaction as OutgoingWireActivity).state);
+    case 'incoming_wire_transfers':
+      return stateItem((tx.transaction as IncomingWireActivity).state);
+    case 'fees':
+      return stateItem((tx.transaction as FeeActivity).status);
+    case 'system_transactions':
+      return stateItem((tx.transaction as SystemTransactionActivity).status);
+    default:
+      return null;
+  }
+}
+
+function stateItem(state: string | undefined): Item | null {
+  return state ? { label: 'State', value: state } : null;
+}
+
 /* The type-specific free-text and reference fields — the "why" of each transaction.
  * Each `type` carries these differently (a wire's description, a card's merchant, a
- * transfer's tag), so we read the narrowed payload per type. */
+ * transfer's tag), so we read the narrowed payload per type. The transaction's own
+ * lifecycle status leads the section. */
 function detailItems(tx: ActivityTransaction): Item[] {
   const items: Item[] = [];
+  const state = lifecycleStatusItem(tx);
+  if (state) items.push(state);
   switch (tx.type) {
     case 'outgoing_wire_transfers': {
       const p = tx.transaction as OutgoingWireActivity;
