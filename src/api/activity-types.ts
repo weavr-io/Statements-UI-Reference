@@ -33,6 +33,10 @@ export interface SystemTransactionActivity {
   status: string;
   instrument: InstrumentRef;
   amount: CurrencyAmount;
+  /** Not present on every system transaction; surfaced in the UI when it is. */
+  subtype?: string;
+  /** Free-text reason for the adjustment, when the wire provides one. */
+  reason?: string;
 }
 
 export interface FeeActivity {
@@ -145,8 +149,15 @@ export interface CardPaymentEvent {
   id: string;
   subtype?: string;
   authCode?: string;
+  /** APPROVED | DECLINED on an authorisation. */
   result?: string;
   settlementState?: string;
+  /** High-level decline reason on a declined authorisation, e.g. AUTH_RULE_CHECKS_FAILED. */
+  declineReason?: string;
+  /** Which spend-control rule failed. NOT_SPEND_CONTROL_RULE_FAILURE means none did. */
+  authRuleFailedReason?: string;
+  authorisationCategory?: string;
+  cancellationReason?: string;
   billingAmount?: CurrencyAmount;
   transactionAmount?: CurrencyAmount;
   fees?: CardPaymentFee[];

@@ -1,1 +1,830 @@
-{"responseCount":26,"transactions":[{"creationTimestamp":1781791473703,"lastUpdatedTimestamp":1781791474889,"status":"COMPLETED","transaction":{"creationTimestamp":1781791473703,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791474889,"status":"COMPLETED","amount":{"currency":"EUR","amount":1000},"id":"116771485745152257"},"amount":{"currency":"EUR","amount":1000},"id":"116771485745152257","type":"system_transactions","direction":"CREDIT"},{"creationTimestamp":1781791471039,"fee":{"id":"116771485576003585","amount":{"currency":"EUR","amount":100}},"lastUpdatedTimestamp":1781791473399,"status":"COMPLETED","transaction":{"destinationFee":{"currency":"EUR","amount":0},"source":{"id":"116771462157238273","type":"managed_accounts"},"sourceFee":{"currency":"EUR","amount":100},"transactionAmount":{"currency":"EUR","amount":163},"destination":{"id":"116771471003484161","type":"managed_accounts"},"executionTimestamp":"1781791473530","destinationAmount":{"currency":"EUR","amount":163},"profileId":"116771460009099521","state":"COMPLETED","tag":"Partner-payout","creationTimestamp":1781791471039,"id":"116771485576003585"},"amount":{"currency":"EUR","amount":163},"id":"116771485576003585","type":"sends","direction":"DEBIT"},{"creationTimestamp":1781791471039,"lastUpdatedTimestamp":1781791473399,"status":"COMPLETED","transaction":{"creationTimestamp":1781791471039,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791473399,"status":"COMPLETED","feeType":"send_fees","amount":{"currency":"EUR","amount":100},"relatedTransactionId":"116771485576003585","id":"116771485576003585"},"amount":{"currency":"EUR","amount":100},"id":"116771485576003585","type":"fees","direction":"DEBIT"},{"creationTimestamp":1781791464031,"fee":{"id":"116771485089792001","amount":{"currency":"EUR","amount":80}},"lastUpdatedTimestamp":1781791473511,"status":"COMPLETED","transaction":{"destination":{"bankIdentifierCode":"NWBKGB2L","iban":"GB29NWBK60161331926819","address":"1 Commerce Street","bankAddress":"1 Bank Plaza","bankCountry":"GB","bankName":"Beneficiary Bank","name":"Globex Logistics Ltd"},"description":"Invoice INV-2026-0488","executionTimestamp":"1781791473706","fee":{"currency":"EUR","amount":80},"transferAmount":{"currency":"EUR","amount":1000},"profileId":"116771459723493377","sourceInstrument":{"id":"116771462157238273","type":"managed_accounts"},"state":"COMPLETED","tag":"Supplier-payment","creationTimestamp":1781791464031,"id":"116771485089792001","type":"SEPA"},"amount":{"currency":"EUR","amount":1000},"id":"116771485089792001","type":"outgoing_wire_transfers","direction":"DEBIT"},{"creationTimestamp":1781791464031,"lastUpdatedTimestamp":1781791473511,"status":"COMPLETED","transaction":{"creationTimestamp":1781791464031,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791473511,"status":"COMPLETED","feeType":"outgoing_wire_transfer_fees","amount":{"currency":"EUR","amount":80},"relatedTransactionId":"116771485089792001","id":"116771485089792001"},"amount":{"currency":"EUR","amount":80},"id":"116771485089792001","type":"fees","direction":"DEBIT"},{"creationTimestamp":1781791461351,"fee":{"id":"116771484934864897","amount":{"currency":"EUR","amount":100}},"lastUpdatedTimestamp":1781791463385,"status":"COMPLETED","transaction":{"destination":{"id":"116771462438584321","type":"managed_cards"},"source":{"id":"116771462157238273","type":"managed_accounts"},"state":"COMPLETED","executionTimestamp":"1781791463437","destinationAmount":{"currency":"EUR","amount":100},"profileId":"116771459645112321","tag":"Internal-transfer","creationTimestamp":1781791461351,"id":"116771484934864897"},"amount":{"currency":"EUR","amount":100},"id":"116771484934864897","type":"transfers","direction":"DEBIT"},{"creationTimestamp":1781791461351,"lastUpdatedTimestamp":1781791463385,"status":"COMPLETED","transaction":{"creationTimestamp":1781791461351,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791463385,"status":"COMPLETED","feeType":"transfer_fees","amount":{"currency":"EUR","amount":100},"relatedTransactionId":"116771484934864897","id":"116771484934864897"},"amount":{"currency":"EUR","amount":100},"id":"116771484934864897","type":"fees","direction":"DEBIT"},{"creationTimestamp":1781791458416,"fee":{"id":"116771484705488897","amount":{"currency":"EUR","amount":100}},"lastUpdatedTimestamp":1781791460591,"status":"COMPLETED","transaction":{"destination":{"id":"116771462438584321","type":"managed_cards"},"source":{"id":"116771462157238273","type":"managed_accounts"},"state":"COMPLETED","executionTimestamp":"1781791460683","destinationAmount":{"currency":"EUR","amount":100},"profileId":"116771459645112321","tag":"Internal-transfer","creationTimestamp":1781791458416,"id":"116771484705488897"},"amount":{"currency":"EUR","amount":100},"id":"116771484705488897","type":"transfers","direction":"DEBIT"},{"creationTimestamp":1781791458416,"lastUpdatedTimestamp":1781791460591,"status":"COMPLETED","transaction":{"creationTimestamp":1781791458416,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791460591,"status":"COMPLETED","feeType":"transfer_fees","amount":{"currency":"EUR","amount":100},"relatedTransactionId":"116771484705488897","id":"116771484705488897"},"amount":{"currency":"EUR","amount":100},"id":"116771484705488897","type":"fees","direction":"DEBIT"},{"creationTimestamp":1781791455885,"lastUpdatedTimestamp":1781791455885,"status":"COMPLETED","transaction":{"creationTimestamp":1781791455885,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791455885,"status":"REVERSED","feeType":"fee_reversals","amount":{"currency":"EUR","amount":10},"id":"116771484372107521"},"amount":{"currency":"EUR","amount":10},"id":"116771484372107521","type":"fees","direction":"CREDIT"},{"creationTimestamp":1781791454237,"lastUpdatedTimestamp":1781791454237,"status":"COMPLETED","transaction":{"creationTimestamp":1781791454237,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791454237,"status":"COMPLETED","feeType":"custom_fees","amount":{"currency":"EUR","amount":10},"id":"116771484372107521"},"amount":{"currency":"EUR","amount":10},"id":"116771484372107521","type":"fees","direction":"DEBIT"},{"creationTimestamp":1781791452190,"lastUpdatedTimestamp":1781791452454,"status":"COMPLETED","transaction":{"creationTimestamp":1781791452190,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791452454,"status":"COMPLETED","amount":{"currency":"EUR","amount":1000},"id":"116771484337963009"},"amount":{"currency":"EUR","amount":1000},"id":"116771484337963009","type":"system_transactions","direction":"CREDIT"},{"creationTimestamp":1781791452050,"lastUpdatedTimestamp":1781791452050,"status":"COMPLETED","transaction":{"creationTimestamp":1781791452050,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791452050,"status":"REVERSED","feeType":"fee_reversals","amount":{"currency":"EUR","amount":100},"id":"116771482857897985"},"amount":{"currency":"EUR","amount":100},"id":"116771482857897985","type":"fees","direction":"CREDIT"},{"creationTimestamp":1781791431457,"fee":{"id":"116771482971471873","amount":{"currency":"EUR","amount":80}},"lastUpdatedTimestamp":1781791454528,"status":"COMPLETED","transaction":{"destination":{"bankIdentifierCode":"AARBDE5W250","iban":"DE89370400440532013000","address":"1 Commerce Street","bankAddress":"1 Bank Plaza","bankCountry":"DE","bankName":"Beneficiary Bank","name":"ACME Industrial GmbH"},"description":"Invoice INV-2026-0419","executionTimestamp":"1781791454680","fee":{"currency":"EUR","amount":80},"transferAmount":{"currency":"EUR","amount":1000},"profileId":"116771459723493377","sourceInstrument":{"id":"116771462157238273","type":"managed_accounts"},"state":"COMPLETED","tag":"Supplier-payment","creationTimestamp":1781791431457,"id":"116771482971471873","type":"SEPA"},"amount":{"currency":"EUR","amount":1000},"id":"116771482971471873","type":"outgoing_wire_transfers","direction":"DEBIT"},{"creationTimestamp":1781791431457,"lastUpdatedTimestamp":1781791454528,"status":"COMPLETED","transaction":{"creationTimestamp":1781791431457,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791454528,"status":"COMPLETED","feeType":"outgoing_wire_transfer_fees","amount":{"currency":"EUR","amount":80},"relatedTransactionId":"116771482971471873","id":"116771482971471873"},"amount":{"currency":"EUR","amount":80},"id":"116771482971471873","type":"fees","direction":"DEBIT"},{"creationTimestamp":1781791429558,"fee":{"id":"116771482857897985","amount":{"currency":"EUR","amount":100}},"lastUpdatedTimestamp":1781791431087,"status":"COMPLETED","transaction":{"destinationFee":{"currency":"EUR","amount":0},"source":{"id":"116771462157238273","type":"managed_accounts"},"sourceFee":{"currency":"EUR","amount":100},"transactionAmount":{"currency":"EUR","amount":163},"destination":{"id":"116771471003484161","type":"managed_accounts"},"executionTimestamp":"1781791431194","destinationAmount":{"currency":"EUR","amount":163},"profileId":"116771460009099521","state":"COMPLETED","tag":"Partner-payout","creationTimestamp":1781791429558,"id":"116771482857897985"},"amount":{"currency":"EUR","amount":163},"id":"116771482857897985","type":"sends","direction":"DEBIT"},{"creationTimestamp":1781791429558,"lastUpdatedTimestamp":1781791452050,"status":"COMPLETED","transaction":{"creationTimestamp":1781791429558,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791452050,"status":"COMPLETED","feeType":"send_fees","amount":{"currency":"EUR","amount":100},"relatedTransactionId":"116771482857897985","id":"116771482857897985"},"amount":{"currency":"EUR","amount":100},"id":"116771482857897985","type":"fees","direction":"DEBIT"},{"creationTimestamp":1781791427954,"lastUpdatedTimestamp":1781791436870,"status":"COMPLETED","transaction":{"destinationInstrument":{"id":"116771462157238273","type":"managed_accounts"},"senderIban":"SK3514552865012668673747","senderName":"Adyen Payouts BV","amount":{"currency":"EUR","amount":1000},"paymentNetwork":"SEPA","senderReference":"Stripe payout May 2026","profileId":"116771459436052737","state":"COMPLETED","id":"116771482711752705","createdAt":1781791427885,"executedAt":1781791427885},"amount":{"currency":"EUR","amount":1000},"id":"116771482711752705","type":"incoming_wire_transfers","direction":"CREDIT"},{"creationTimestamp":1781791427290,"fee":{"id":"116771482705788929","amount":{"currency":"EUR","amount":100}},"lastUpdatedTimestamp":1781791429359,"status":"COMPLETED","transaction":{"destination":{"id":"116771462438584321","type":"managed_cards"},"source":{"id":"116771462157238273","type":"managed_accounts"},"state":"COMPLETED","executionTimestamp":"1781791429416","destinationAmount":{"currency":"EUR","amount":100},"profileId":"116771459645112321","tag":"Internal-transfer","creationTimestamp":1781791427290,"id":"116771482705788929"},"amount":{"currency":"EUR","amount":100},"id":"116771482705788929","type":"transfers","direction":"DEBIT"},{"creationTimestamp":1781791427290,"lastUpdatedTimestamp":1781791429359,"status":"COMPLETED","transaction":{"creationTimestamp":1781791427290,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791429359,"status":"COMPLETED","feeType":"transfer_fees","amount":{"currency":"EUR","amount":100},"relatedTransactionId":"116771482705788929","id":"116771482705788929"},"amount":{"currency":"EUR","amount":100},"id":"116771482705788929","type":"fees","direction":"DEBIT"},{"creationTimestamp":1781791426358,"lastUpdatedTimestamp":1781791437278,"status":"COMPLETED","transaction":{"destinationInstrument":{"id":"116771462157238273","type":"managed_accounts"},"senderIban":"TN3332467V7X4URATWBVH46M","senderName":"Helix Software AG","amount":{"currency":"EUR","amount":200000},"paymentNetwork":"SEPA","senderReference":"Salary - May 2026","profileId":"116771459436052737","state":"COMPLETED","id":"116771482605191169","createdAt":1781791426285,"executedAt":1781791426285},"amount":{"currency":"EUR","amount":200000},"id":"116771482605191169","type":"incoming_wire_transfers","direction":"CREDIT"},{"creationTimestamp":1781791425669,"fee":{"id":"116771482595098625","amount":{"currency":"EUR","amount":100}},"lastUpdatedTimestamp":1781791426835,"status":"COMPLETED","transaction":{"destination":{"id":"116771462438584321","type":"managed_cards"},"source":{"id":"116771462157238273","type":"managed_accounts"},"state":"COMPLETED","executionTimestamp":"1781791426885","destinationAmount":{"currency":"EUR","amount":4000},"profileId":"116771459645112321","tag":"Internal-transfer","creationTimestamp":1781791425669,"id":"116771482595098625"},"amount":{"currency":"EUR","amount":4000},"id":"116771482595098625","type":"transfers","direction":"DEBIT"},{"creationTimestamp":1781791425669,"lastUpdatedTimestamp":1781791426835,"status":"COMPLETED","transaction":{"creationTimestamp":1781791425669,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791426835,"status":"COMPLETED","feeType":"transfer_fees","amount":{"currency":"EUR","amount":100},"relatedTransactionId":"116771482595098625","id":"116771482595098625"},"amount":{"currency":"EUR","amount":100},"id":"116771482595098625","type":"fees","direction":"DEBIT"},{"creationTimestamp":1781791149402,"fee":{"id":"116771464493203457","amount":{"currency":"EUR","amount":100}},"lastUpdatedTimestamp":1781791151249,"status":"COMPLETED","transaction":{"destination":{"id":"116771462438584321","type":"managed_cards"},"source":{"id":"116771462157238273","type":"managed_accounts"},"state":"COMPLETED","executionTimestamp":"1781791151310","destinationAmount":{"currency":"EUR","amount":12160},"profileId":"116771459645112321","tag":"tag","creationTimestamp":1781791149402,"id":"116771464493203457"},"amount":{"currency":"EUR","amount":12160},"id":"116771464493203457","type":"transfers","direction":"DEBIT"},{"creationTimestamp":1781791149402,"lastUpdatedTimestamp":1781791151249,"status":"COMPLETED","transaction":{"creationTimestamp":1781791149402,"instrument":{"id":"116771462157238273","type":"managed_accounts"},"lastUpdatedTimestamp":1781791151249,"status":"COMPLETED","feeType":"transfer_fees","amount":{"currency":"EUR","amount":100},"relatedTransactionId":"116771464493203457","id":"116771464493203457"},"amount":{"currency":"EUR","amount":100},"id":"116771464493203457","type":"fees","direction":"DEBIT"},{"creationTimestamp":1781791127703,"lastUpdatedTimestamp":1781791140394,"status":"COMPLETED","transaction":{"destinationInstrument":{"id":"116771462157238273","type":"managed_accounts"},"senderIban":"AO76995388309690033688871","senderName":"Tesla Ltd","amount":{"currency":"EUR","amount":200000},"paymentNetwork":"SEPA","senderReference":"Simulated deposit","profileId":"116771459436052737","state":"COMPLETED","id":"116771462963920897","createdAt":1781791127553,"executedAt":1781791127553},"amount":{"currency":"EUR","amount":200000},"id":"116771462963920897","type":"incoming_wire_transfers","direction":"CREDIT"}],"count":26}
+{
+    "responseCount": 24,
+    "transactions": [
+        {
+            "creationTimestamp": 1781865975894,
+            "lastUpdatedTimestamp": 1781865976129,
+            "status": "COMPLETED",
+            "transaction": {
+                "creationTimestamp": 1781865975894,
+                "instrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "lastUpdatedTimestamp": 1781865976129,
+                "status": "COMPLETED",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 1000
+                },
+                "id": "116776368323952897"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 1000
+            },
+            "id": "116776368323952897",
+            "type": "system_transactions",
+            "direction": "CREDIT"
+        },
+        {
+            "creationTimestamp": 1781865970331,
+            "fee": {
+                "id": "116776367961604097",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 100
+                }
+            },
+            "lastUpdatedTimestamp": 1781865975598,
+            "status": "COMPLETED",
+            "transaction": {
+                "destinationFee": {
+                    "currency": "EUR",
+                    "amount": 0
+                },
+                "source": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "sourceFee": {
+                    "currency": "EUR",
+                    "amount": 100
+                },
+                "transactionAmount": {
+                    "currency": "EUR",
+                    "amount": 163
+                },
+                "destination": {
+                    "id": "116776358806290433",
+                    "type": "managed_accounts"
+                },
+                "executionTimestamp": "1781865975746",
+                "destinationAmount": {
+                    "currency": "EUR",
+                    "amount": 163
+                },
+                "profileId": "116776344263983105",
+                "state": "COMPLETED",
+                "tag": "Partner-payout",
+                "creationTimestamp": 1781865970331,
+                "id": "116776367961604097"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 163
+            },
+            "id": "116776367961604097",
+            "type": "sends",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865970331,
+            "lastUpdatedTimestamp": 1781865975598,
+            "status": "COMPLETED",
+            "transaction": {
+                "creationTimestamp": 1781865970331,
+                "instrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "lastUpdatedTimestamp": 1781865975598,
+                "status": "COMPLETED",
+                "feeType": "send_fees",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 100
+                },
+                "relatedTransactionId": "116776367961604097",
+                "id": "116776367961604097"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 100
+            },
+            "id": "116776367961604097",
+            "type": "fees",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865963480,
+            "lastUpdatedTimestamp": 1781865974849,
+            "status": "COMPLETED",
+            "transaction": {
+                "destinationInstrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "senderIban": "RO87NROAMGQCEKM8TJ842WRO",
+                "senderName": "Wise Payments Ltd",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 1000
+                },
+                "paymentNetwork": "SEPA",
+                "senderReference": "Marketplace settlement May 2026",
+                "profileId": "116776343184212225",
+                "state": "COMPLETED",
+                "id": "116776367432007681",
+                "createdAt": 1781865963368,
+                "executedAt": 1781865963368
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 1000
+            },
+            "id": "116776367432007681",
+            "type": "incoming_wire_transfers",
+            "direction": "CREDIT"
+        },
+        {
+            "creationTimestamp": 1781865961991,
+            "fee": {
+                "id": "116776367389474817",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 80
+                }
+            },
+            "lastUpdatedTimestamp": 1781865975360,
+            "status": "COMPLETED",
+            "transaction": {
+                "destination": {
+                    "bankIdentifierCode": "NWBKGB2L",
+                    "iban": "GB29NWBK60161331926819",
+                    "address": "1 Commerce Street",
+                    "bankAddress": "1 Bank Plaza",
+                    "bankCountry": "GB",
+                    "bankName": "Beneficiary Bank",
+                    "name": "Globex Logistics Ltd"
+                },
+                "description": "Invoice INV-2026-0488",
+                "executionTimestamp": "1781865975520",
+                "fee": {
+                    "currency": "EUR",
+                    "amount": 80
+                },
+                "transferAmount": {
+                    "currency": "EUR",
+                    "amount": 1000
+                },
+                "profileId": "116776343672193281",
+                "sourceInstrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "state": "COMPLETED",
+                "tag": "Supplier-payment",
+                "creationTimestamp": 1781865961991,
+                "id": "116776367389474817",
+                "type": "SEPA"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 1000
+            },
+            "id": "116776367389474817",
+            "type": "outgoing_wire_transfers",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865961991,
+            "lastUpdatedTimestamp": 1781865975360,
+            "status": "COMPLETED",
+            "transaction": {
+                "creationTimestamp": 1781865961991,
+                "instrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "lastUpdatedTimestamp": 1781865975360,
+                "status": "COMPLETED",
+                "feeType": "outgoing_wire_transfer_fees",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 80
+                },
+                "relatedTransactionId": "116776367389474817",
+                "id": "116776367389474817"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 80
+            },
+            "id": "116776367389474817",
+            "type": "fees",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865957777,
+            "lastUpdatedTimestamp": 1781865961321,
+            "status": "COMPLETED",
+            "transaction": {
+                "destination": {
+                    "id": "116776347965587457",
+                    "type": "managed_cards"
+                },
+                "source": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "state": "COMPLETED",
+                "executionTimestamp": "1781865961398",
+                "destinationAmount": {
+                    "currency": "EUR",
+                    "amount": 100
+                },
+                "profileId": "116776343582670849",
+                "tag": "Internal-transfer",
+                "creationTimestamp": 1781865957777,
+                "id": "116776367102296065"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 100
+            },
+            "id": "116776367102296065",
+            "type": "transfers",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865953269,
+            "lastUpdatedTimestamp": 1781865955426,
+            "status": "COMPLETED",
+            "transaction": {
+                "destination": {
+                    "id": "116776347965587457",
+                    "type": "managed_cards"
+                },
+                "source": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "state": "COMPLETED",
+                "executionTimestamp": "1781865955480",
+                "destinationAmount": {
+                    "currency": "EUR",
+                    "amount": 100
+                },
+                "profileId": "116776343582670849",
+                "tag": "Internal-transfer",
+                "creationTimestamp": 1781865953269,
+                "id": "116776366835695617"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 100
+            },
+            "id": "116776366835695617",
+            "type": "transfers",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865950358,
+            "lastUpdatedTimestamp": 1781865950358,
+            "status": "COMPLETED",
+            "transaction": {
+                "creationTimestamp": 1781865950358,
+                "instrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "lastUpdatedTimestamp": 1781865950358,
+                "status": "REVERSED",
+                "feeType": "fee_reversals",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 10
+                },
+                "id": "116776366447722753"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 10
+            },
+            "id": "116776366447722753",
+            "type": "fees",
+            "direction": "CREDIT"
+        },
+        {
+            "creationTimestamp": 1781865948923,
+            "lastUpdatedTimestamp": 1781865948923,
+            "status": "COMPLETED",
+            "transaction": {
+                "creationTimestamp": 1781865948923,
+                "instrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "lastUpdatedTimestamp": 1781865948923,
+                "status": "COMPLETED",
+                "feeType": "custom_fees",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 10
+                },
+                "id": "116776366447722753"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 10
+            },
+            "id": "116776366447722753",
+            "type": "fees",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865946542,
+            "lastUpdatedTimestamp": 1781865946946,
+            "status": "COMPLETED",
+            "transaction": {
+                "creationTimestamp": 1781865946542,
+                "instrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "lastUpdatedTimestamp": 1781865946946,
+                "status": "COMPLETED",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 1000
+                },
+                "id": "116776366390706689"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 1000
+            },
+            "id": "116776366390706689",
+            "type": "system_transactions",
+            "direction": "CREDIT"
+        },
+        {
+            "creationTimestamp": 1781865944214,
+            "lastUpdatedTimestamp": 1781865945881,
+            "status": "SUBMITTED",
+            "transaction": {
+                "destinationFee": {
+                    "currency": "EUR",
+                    "amount": 0
+                },
+                "source": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "sourceFee": {
+                    "currency": "EUR",
+                    "amount": 0
+                },
+                "transactionAmount": {
+                    "currency": "EUR",
+                    "amount": 163
+                },
+                "destination": {
+                    "id": "116776358806290433",
+                    "type": "managed_accounts"
+                },
+                "scheduledTimestamp": "1781966178000",
+                "destinationAmount": {
+                    "currency": "EUR",
+                    "amount": 163
+                },
+                "profileId": "116776344263983105",
+                "state": "SCHEDULED",
+                "tag": "Partner-payout",
+                "creationTimestamp": 1781865944214,
+                "id": "116776366246002689"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 163
+            },
+            "id": "116776366246002689",
+            "type": "sends",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865943942,
+            "lastUpdatedTimestamp": 1781865943942,
+            "status": "COMPLETED",
+            "transaction": {
+                "creationTimestamp": 1781865943942,
+                "instrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "lastUpdatedTimestamp": 1781865943942,
+                "status": "REVERSED",
+                "feeType": "fee_reversals",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 100
+                },
+                "id": "116776364677267457"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 100
+            },
+            "id": "116776364677267457",
+            "type": "fees",
+            "direction": "CREDIT"
+        },
+        {
+            "creationTimestamp": 1781865922178,
+            "fee": {
+                "id": "116776364797657089",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 80
+                }
+            },
+            "lastUpdatedTimestamp": 1781865948964,
+            "status": "COMPLETED",
+            "transaction": {
+                "destination": {
+                    "bankIdentifierCode": "AARBDE5W250",
+                    "iban": "DE89370400440532013000",
+                    "address": "1 Commerce Street",
+                    "bankAddress": "1 Bank Plaza",
+                    "bankCountry": "DE",
+                    "bankName": "Beneficiary Bank",
+                    "name": "ACME Industrial GmbH"
+                },
+                "description": "Invoice INV-2026-0419",
+                "executionTimestamp": "1781865949275",
+                "fee": {
+                    "currency": "EUR",
+                    "amount": 80
+                },
+                "transferAmount": {
+                    "currency": "EUR",
+                    "amount": 1000
+                },
+                "profileId": "116776343672193281",
+                "sourceInstrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "state": "COMPLETED",
+                "tag": "Supplier-payment",
+                "creationTimestamp": 1781865922178,
+                "id": "116776364797657089",
+                "type": "SEPA"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 1000
+            },
+            "id": "116776364797657089",
+            "type": "outgoing_wire_transfers",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865922178,
+            "lastUpdatedTimestamp": 1781865948964,
+            "status": "COMPLETED",
+            "transaction": {
+                "creationTimestamp": 1781865922178,
+                "instrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "lastUpdatedTimestamp": 1781865948964,
+                "status": "COMPLETED",
+                "feeType": "outgoing_wire_transfer_fees",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 80
+                },
+                "relatedTransactionId": "116776364797657089",
+                "id": "116776364797657089"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 80
+            },
+            "id": "116776364797657089",
+            "type": "fees",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865920243,
+            "fee": {
+                "id": "116776364677267457",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 100
+                }
+            },
+            "lastUpdatedTimestamp": 1781865921841,
+            "status": "COMPLETED",
+            "transaction": {
+                "destinationFee": {
+                    "currency": "EUR",
+                    "amount": 0
+                },
+                "source": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "sourceFee": {
+                    "currency": "EUR",
+                    "amount": 100
+                },
+                "transactionAmount": {
+                    "currency": "EUR",
+                    "amount": 163
+                },
+                "destination": {
+                    "id": "116776358806290433",
+                    "type": "managed_accounts"
+                },
+                "executionTimestamp": "1781865921937",
+                "destinationAmount": {
+                    "currency": "EUR",
+                    "amount": 163
+                },
+                "profileId": "116776344263983105",
+                "state": "COMPLETED",
+                "tag": "Partner-payout",
+                "creationTimestamp": 1781865920243,
+                "id": "116776364677267457"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 163
+            },
+            "id": "116776364677267457",
+            "type": "sends",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865920243,
+            "lastUpdatedTimestamp": 1781865943942,
+            "status": "COMPLETED",
+            "transaction": {
+                "creationTimestamp": 1781865920243,
+                "instrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "lastUpdatedTimestamp": 1781865943942,
+                "status": "COMPLETED",
+                "feeType": "send_fees",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 100
+                },
+                "relatedTransactionId": "116776364677267457",
+                "id": "116776364677267457"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 100
+            },
+            "id": "116776364677267457",
+            "type": "fees",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865919027,
+            "lastUpdatedTimestamp": 1781865931049,
+            "status": "COMPLETED",
+            "transaction": {
+                "destinationInstrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "senderIban": "KZ97182I9WIM6RERHEZ1",
+                "senderName": "Adyen Payouts BV",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 1000
+                },
+                "paymentNetwork": "SEPA",
+                "senderReference": "Stripe payout May 2026",
+                "profileId": "116776343184212225",
+                "state": "COMPLETED",
+                "id": "116776364384583681",
+                "createdAt": 1781865917491,
+                "executedAt": 1781865917491
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 1000
+            },
+            "id": "116776364384583681",
+            "type": "incoming_wire_transfers",
+            "direction": "CREDIT"
+        },
+        {
+            "creationTimestamp": 1781865918082,
+            "lastUpdatedTimestamp": 1781865920048,
+            "status": "COMPLETED",
+            "transaction": {
+                "destination": {
+                    "id": "116776347965587457",
+                    "type": "managed_cards"
+                },
+                "source": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "state": "COMPLETED",
+                "executionTimestamp": "1781865920094",
+                "destinationAmount": {
+                    "currency": "EUR",
+                    "amount": 100
+                },
+                "profileId": "116776343582670849",
+                "tag": "Internal-transfer",
+                "creationTimestamp": 1781865918082,
+                "id": "116776364530860033"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 100
+            },
+            "id": "116776364530860033",
+            "type": "transfers",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865917115,
+            "fee": {
+                "id": "116776364380258305",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 80
+                }
+            },
+            "lastUpdatedTimestamp": 1781865917879,
+            "status": "DRAFT",
+            "transaction": {
+                "destination": {
+                    "bankIdentifierCode": "AARBDE5W250",
+                    "iban": "DE89370400440532013000",
+                    "address": "1 Commerce Street",
+                    "bankAddress": "1 Bank Plaza",
+                    "bankCountry": "DE",
+                    "bankName": "Beneficiary Bank",
+                    "name": "ACME Industrial GmbH"
+                },
+                "description": "Invoice INV-2026-0419",
+                "fee": {
+                    "currency": "EUR",
+                    "amount": 80
+                },
+                "transferAmount": {
+                    "currency": "EUR",
+                    "amount": 2000
+                },
+                "profileId": "116776343672193281",
+                "sourceInstrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "state": "PENDING_CHALLENGE",
+                "tag": "Supplier-payment",
+                "creationTimestamp": 1781865917115,
+                "id": "116776364380258305",
+                "type": "SEPA"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 2000
+            },
+            "id": "116776364380258305",
+            "type": "outgoing_wire_transfers",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865914636,
+            "lastUpdatedTimestamp": 1781865925475,
+            "status": "COMPLETED",
+            "transaction": {
+                "destinationInstrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "senderIban": "MC263519362070ODJ76MH5O7825",
+                "senderName": "Helix Software AG",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 200000
+                },
+                "paymentNetwork": "SEPA",
+                "senderReference": "Salary - May 2026",
+                "profileId": "116776343184212225",
+                "state": "COMPLETED",
+                "id": "116776364264456193",
+                "createdAt": 1781865914534,
+                "executedAt": 1781865914534
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 200000
+            },
+            "id": "116776364264456193",
+            "type": "incoming_wire_transfers",
+            "direction": "CREDIT"
+        },
+        {
+            "creationTimestamp": 1781865913888,
+            "lastUpdatedTimestamp": 1781865915087,
+            "status": "COMPLETED",
+            "transaction": {
+                "destination": {
+                    "id": "116776347965587457",
+                    "type": "managed_cards"
+                },
+                "source": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "state": "COMPLETED",
+                "executionTimestamp": "1781865915141",
+                "destinationAmount": {
+                    "currency": "EUR",
+                    "amount": 4000
+                },
+                "profileId": "116776343582670849",
+                "tag": "Internal-transfer",
+                "creationTimestamp": 1781865913888,
+                "id": "116776364257902593"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 4000
+            },
+            "id": "116776364257902593",
+            "type": "transfers",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865706308,
+            "lastUpdatedTimestamp": 1781865709913,
+            "status": "COMPLETED",
+            "transaction": {
+                "destination": {
+                    "id": "116776347965587457",
+                    "type": "managed_cards"
+                },
+                "source": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "state": "COMPLETED",
+                "executionTimestamp": "1781865710043",
+                "destinationAmount": {
+                    "currency": "EUR",
+                    "amount": 12160
+                },
+                "profileId": "116776343582670849",
+                "tag": "tag",
+                "creationTimestamp": 1781865706308,
+                "id": "116776350645223425"
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 12160
+            },
+            "id": "116776350645223425",
+            "type": "transfers",
+            "direction": "DEBIT"
+        },
+        {
+            "creationTimestamp": 1781865680731,
+            "lastUpdatedTimestamp": 1781865696735,
+            "status": "COMPLETED",
+            "transaction": {
+                "destinationInstrument": {
+                    "id": "116776347499233281",
+                    "type": "managed_accounts"
+                },
+                "senderIban": "SA74517OGQZJRHQQ13DQ5HSX",
+                "senderName": "Tesla Ltd",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 200000
+                },
+                "paymentNetwork": "SEPA",
+                "senderReference": "Simulated deposit",
+                "profileId": "116776343184212225",
+                "state": "COMPLETED",
+                "id": "116776348851830785",
+                "createdAt": 1781865679689,
+                "executedAt": 1781865679689
+            },
+            "amount": {
+                "currency": "EUR",
+                "amount": 200000
+            },
+            "id": "116776348851830785",
+            "type": "incoming_wire_transfers",
+            "direction": "CREDIT"
+        }
+    ],
+    "count": 24
+}

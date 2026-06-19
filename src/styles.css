@@ -809,6 +809,13 @@ td.entry-time {
   vertical-align: middle;
 }
 
+/* Fully-refunded card payment: the debit no longer stands. */
+.amount-value.refunded {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+  color: var(--muted);
+}
+
 /* Card event timeline ------------------------------------------------- */
 
 .event-timeline {
@@ -822,10 +829,24 @@ td.entry-time {
 
 .event-item {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 0.75rem;
+  flex-direction: column;
+  gap: 0.3rem;
   font-size: 0.8rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px dashed var(--border);
+}
+
+.event-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.event-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--muted);
+  flex-wrap: wrap;
 }
 
 .event-type {
@@ -836,13 +857,36 @@ td.entry-time {
   color: var(--accent);
 }
 
-.event-meta {
+.event-amounts {
   display: flex;
-  gap: 0.6rem;
-  color: var(--muted);
-  font-variant-numeric: tabular-nums;
+  align-items: center;
+  gap: 0.5rem;
   flex-wrap: wrap;
-  justify-content: flex-end;
+  color: var(--fg);
+  font-variant-numeric: tabular-nums;
+}
+
+.event-amount {
+  font-weight: 600;
+}
+
+.event-fee {
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.05rem 0.5rem;
+  font-size: 0.72rem;
+  font-weight: 500;
+}
+
+.event-declined {
+  color: var(--debit);
+  font-weight: 600;
+}
+
+.event-reason {
+  color: var(--debit);
+  font-size: 0.74rem;
 }
 
 /* Responsive ---------------------------------------------------------- */

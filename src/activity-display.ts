@@ -12,9 +12,12 @@ import type {
   IncomingWireActivity,
   OutgoingWireActivity,
   SendActivity,
+  SystemTransactionActivity,
   TransferActivity,
 } from './api/activity-types';
-import { SUBTYPE_LABEL } from './labels';
+import { SUBTYPE_LABEL, feeLabel } from './labels';
+
+export type InstrumentType = 'managed_accounts' | 'managed_cards';
 
 export type CpTone = 'merchant' | 'bank' | 'instrument';
 
@@ -63,24 +66,93 @@ export function activityCounterparty(tx: ActivityTransaction): CounterpartyDispl
       return display(p.senderName ?? 'Sender', 'bank', p.senderReference ?? p.senderIban);
     }
     case 'sends': {
+      // A send is outgoing: the counterparty is the recipient (destination), never
+      // this instrument's own id. The tag (e.g. "Partner-payout") is the useful detail.
       const p = tx.transaction as SendActivity;
-      return display(`Account ${p.destination?.id ?? '—'}`, 'instrument', p.source?.id ? `from ${p.source.id}` : undefined);
+      const label = instrumentLabel(p.destination?.type) ?? 'Account';
+      return display(`${label} ${p.destination?.id ?? '—'}`, 'instrument', p.tag);
     }
     case 'transfers': {
       const p = tx.transaction as TransferActivity;
       // The counterparty is whichever leg isn't this instrument; direction tells us which.
       const other = tx.direction === 'DEBIT' ? p.destination : p.source;
-      return display(`Instrument ${other?.id ?? '—'}`, 'instrument', instrumentLabel(other?.type));
+      const label = instrumentLabel(other?.type) ?? 'Instrument';
+      return display(`${label} ${other?.id ?? '—'}`, 'instrument', p.tag);
     }
     case 'fees': {
       const p = tx.transaction as FeeActivity;
-      const label = SUBTYPE_LABEL[p.feeType] ?? humanise(p.feeType ?? 'Fee');
-      return display(label, 'instrument', p.relatedTransactionId ? `re ${p.relatedTransactionId}` : undefined);
+      return display(feeLabel(p.feeType), 'instrument', p.relatedTransactionId ? `re ${p.relatedTransactionId}` : undefined);
     }
-    case 'system_transactions':
+    case 'system_transactions': {
+      const p = tx.transaction as SystemTransactionActivity;
+      const label = p.subtype ? (SUBTYPE_LABEL[p.subtype] ?? humanise(p.subtype)) : 'System';
+      return display(label, 'instrument', p.reason);
+    }
     default:
       return null;
   }
+}
+
+/* The activity feed never labels which instrument the feed belongs to — but the
+ * holding instrument's id appears inside the payloads (as the fee/system
+ * `instrument`, the card, the send/wire source, etc.). Recover it from the data
+ * so the UI can show the real id rather than a configured placeholder. */
+export function deriveSelfInstrumentId(
+  txs: ActivityTransaction[],
+  instrumentType: InstrumentType,
+): string | null {
+  for (const tx of txs) {
+    const id = selfIdFromTransaction(tx, instrumentType);
+    if (id) return id;
+  }
+  return null;
+}
+
+function selfIdFromTransaction(tx: ActivityTransaction, instrumentType: InstrumentType): string | null {
+  const p = tx.transaction;
+  switch (tx.type) {
+    case 'fees':
+    case 'system_transactions': {
+      const inst = (p as FeeActivity).instrument;
+      return inst?.type === instrumentType ? inst.id : null;
+    }
+    case 'card_payments': {
+      const card = (p as CardPaymentActivity).card;
+      return instrumentType === 'managed_cards' && card?.id ? card.id : null;
+    }
+    case 'sends': {
+      const s = (p as SendActivity).source;
+      return s?.type === instrumentType ? s.id : null;
+    }
+    case 'outgoing_wire_transfers': {
+      const s = (p as OutgoingWireActivity).sourceInstrument;
+      return s?.type === instrumentType ? s.id : null;
+    }
+    case 'incoming_wire_transfers': {
+      const d = (p as IncomingWireActivity).destinationInstrument;
+      return d?.type === instrumentType ? d.id : null;
+    }
+    case 'transfers': {
+      const t = p as TransferActivity;
+      if (t.source?.type === instrumentType) return t.source.id;
+      if (t.destination?.type === instrumentType) return t.destination.id;
+      return null;
+    }
+    default:
+      return null;
+  }
+}
+
+/* A card payment whose REFUND events fully cover its amount has been reversed — the
+ * original debit no longer stands, which the UI signals by striking the amount through. */
+export function isFullyRefunded(tx: ActivityTransaction): boolean {
+  if (tx.type !== 'card_payments') return false;
+  const p = tx.transaction as CardPaymentActivity;
+  const refunded = (p.events ?? [])
+    .filter(e => e.type === 'REFUND')
+    .reduce((sum, e) => sum + (e.billingAmount?.amount ?? 0), 0);
+  const charged = p.displayAmount?.amount ?? tx.amount.amount;
+  return refunded > 0 && refunded >= charged;
 }
 
 export type StatusTone = 'ok' | 'pending' | 'warn' | 'neutral';

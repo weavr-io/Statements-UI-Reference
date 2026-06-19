@@ -2,18 +2,18 @@
     "entries": [
         {
             "counterparty": {
-                "iban": "AO76995388309690033688871",
+                "iban": "SA74517OGQZJRHQQ13DQ5HSX",
                 "name": "Tesla Ltd",
                 "reference": "Simulated deposit"
             },
             "transaction": {
                 "type": "incoming_wire_transfers",
-                "id": "116771462963920897",
+                "id": "116776348851830785",
                 "subtype": "fundings"
             },
             "executingAccessInstrument": {
                 "type": "ibans",
-                "id": "116771462383730689"
+                "id": "116776347836743681"
             },
             "balanceAdjustment": {
                 "currency": "EUR",
@@ -23,23 +23,14 @@
                 "currency": "EUR",
                 "amount": 200000
             },
-            "entryId": "116771463914913793",
-            "timestamp": 1781791140394
+            "entryId": "116776350042816513",
+            "timestamp": 1781865696735
         },
         {
             "counterparty": {
                 "type": "managed_cards",
                 "friendlyName": "Travel Spend Card",
-                "id": "116771462438584321"
-            },
-            "fee": {
-                "type": "fees",
-                "id": "116771464493203457",
-                "subtype": "transfer_fees",
-                "amount": {
-                    "currency": "EUR",
-                    "amount": 100
-                }
+                "id": "116776347965587457"
             },
             "forex": {
                 "originalAmount": {
@@ -49,7 +40,7 @@
             },
             "transaction": {
                 "type": "transfers",
-                "id": "116771464493203457"
+                "id": "116776350645223425"
             },
             "balanceAdjustment": {
                 "currency": "EUR",
@@ -59,26 +50,8 @@
                 "currency": "EUR",
                 "amount": 187840
             },
-            "entryId": "116771464629846017",
-            "timestamp": 1781791150776
-        },
-        {
-            "transaction": {
-                "type": "fees",
-                "id": "116771464493203457",
-                "subtype": "transfer_fees"
-            },
-            "relatedEntryId": "116771464629846017",
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": -100
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 187740
-            },
-            "entryId": "116771464632533249",
-            "timestamp": 1781791150776
+            "entryId": "116776350913003521",
+            "timestamp": 1781865708258
         },
         {
             "counterparty": {
@@ -89,7 +62,7 @@
             },
             "fee": {
                 "type": "fees",
-                "id": "116771465685303297",
+                "id": "116776353639235585",
                 "subtype": "purchase_fees",
                 "amount": {
                     "currency": "EUR",
@@ -98,7 +71,7 @@
             },
             "transaction": {
                 "type": "card_payments",
-                "id": "116771465685303297",
+                "id": "116776353639235585",
                 "subtype": "sale_purchases"
             },
             "balanceAdjustment": {
@@ -107,43 +80,34 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 182740
+                "amount": 182840
             },
-            "entryId": "116771466779426817",
-            "timestamp": 1781791183482
+            "entryId": "116776353638711297",
+            "timestamp": 1781865751484
         },
         {
             "transaction": {
                 "type": "fees",
-                "id": "116771465685303297",
+                "id": "116776353639235585",
                 "subtype": "purchase_fees"
             },
-            "relatedEntryId": "116771466779426817",
+            "relatedEntryId": "116776353638711297",
             "balanceAdjustment": {
                 "currency": "EUR",
                 "amount": -10
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 182730
+                "amount": 182830
             },
-            "entryId": "116771466783228161",
-            "timestamp": 1781791183482
+            "entryId": "116776353644806657",
+            "timestamp": 1781865751484
         },
         {
             "counterparty": {
                 "type": "managed_cards",
                 "friendlyName": "Travel Spend Card",
-                "id": "116771462438584321"
-            },
-            "fee": {
-                "type": "fees",
-                "id": "116771482595098625",
-                "subtype": "transfer_fees",
-                "amount": {
-                    "currency": "EUR",
-                    "amount": 100
-                }
+                "id": "116776347965587457"
             },
             "forex": {
                 "originalAmount": {
@@ -153,7 +117,7 @@
             },
             "transaction": {
                 "type": "transfers",
-                "id": "116771482595098625"
+                "id": "116776364257902593"
             },
             "balanceAdjustment": {
                 "currency": "EUR",
@@ -161,43 +125,16 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 178730
+                "amount": 178830
             },
-            "entryId": "116771482686783489",
-            "timestamp": 1781791426453
-        },
-        {
-            "transaction": {
-                "type": "fees",
-                "id": "116771482595098625",
-                "subtype": "transfer_fees"
-            },
-            "relatedEntryId": "116771482686783489",
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": -100
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 178630
-            },
-            "entryId": "116771482688487425",
-            "timestamp": 1781791426453
+            "entryId": "116776364349521921",
+            "timestamp": 1781865914718
         },
         {
             "counterparty": {
                 "type": "managed_cards",
                 "friendlyName": "Travel Spend Card",
-                "id": "116771462438584321"
-            },
-            "fee": {
-                "type": "fees",
-                "id": "116771482705788929",
-                "subtype": "transfer_fees",
-                "amount": {
-                    "currency": "EUR",
-                    "amount": 100
-                }
+                "id": "116776347965587457"
             },
             "forex": {
                 "originalAmount": {
@@ -207,7 +144,7 @@
             },
             "transaction": {
                 "type": "transfers",
-                "id": "116771482705788929"
+                "id": "116776364530860033"
             },
             "balanceAdjustment": {
                 "currency": "EUR",
@@ -215,42 +152,24 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 178530
+                "amount": 178730
             },
-            "entryId": "116771482853310465",
-            "timestamp": 1781791428762
-        },
-        {
-            "transaction": {
-                "type": "fees",
-                "id": "116771482705788929",
-                "subtype": "transfer_fees"
-            },
-            "relatedEntryId": "116771482853310465",
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": -100
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 178430
-            },
-            "entryId": "116771482855538945",
-            "timestamp": 1781791428762
+            "entryId": "116776364673662977",
+            "timestamp": 1781865919517
         },
         {
             "counterparty": {
                 "type": "managed_accounts",
                 "owner": {
-                    "id": "116771466909911041",
+                    "id": "116776353728562433",
                     "name": "Jane Dae",
                     "type": "consumers"
                 },
-                "id": "116771471003484161"
+                "id": "116776358806290433"
             },
             "fee": {
                 "type": "fees",
-                "id": "116771482857897985",
+                "id": "116776364677267457",
                 "subtype": "send_fees",
                 "amount": {
                     "currency": "EUR",
@@ -265,7 +184,7 @@
             },
             "transaction": {
                 "type": "sends",
-                "id": "116771482857897985"
+                "id": "116776364677267457"
             },
             "balanceAdjustment": {
                 "currency": "EUR",
@@ -273,69 +192,43 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 178267
+                "amount": 178567
             },
-            "entryId": "116771482917011457",
-            "timestamp": 1781791430249
+            "entryId": "116776364744638465",
+            "timestamp": 1781865921035
         },
         {
             "transaction": {
                 "type": "fees",
-                "id": "116771482857897985",
+                "id": "116776364677267457",
                 "subtype": "send_fees"
             },
-            "relatedEntryId": "116771482917011457",
+            "relatedEntryId": "116776364744638465",
             "balanceAdjustment": {
                 "currency": "EUR",
                 "amount": -100
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 178167
+                "amount": 178467
             },
-            "entryId": "116771482966032897",
-            "timestamp": 1781791430249
+            "entryId": "116776364791300609",
+            "timestamp": 1781865921035
         },
         {
             "counterparty": {
-                "iban": "SK3514552865012668673747",
-                "name": "Adyen Payouts BV",
-                "reference": "Stripe payout May 2026"
-            },
-            "transaction": {
-                "type": "incoming_wire_transfers",
-                "id": "116771482711752705",
-                "subtype": "fundings"
-            },
-            "executingAccessInstrument": {
-                "type": "ibans",
-                "id": "116771462383730689"
-            },
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": 1000
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 179167
-            },
-            "entryId": "116771483343585537",
-            "timestamp": 1781791436870
-        },
-        {
-            "counterparty": {
-                "iban": "TN3332467V7X4URATWBVH46M",
+                "iban": "MC263519362070ODJ76MH5O7825",
                 "name": "Helix Software AG",
                 "reference": "Salary - May 2026"
             },
             "transaction": {
                 "type": "incoming_wire_transfers",
-                "id": "116771482605191169",
+                "id": "116776364264456193",
                 "subtype": "fundings"
             },
             "executingAccessInstrument": {
                 "type": "ibans",
-                "id": "116771462383730689"
+                "id": "116776347836743681"
             },
             "balanceAdjustment": {
                 "currency": "EUR",
@@ -343,10 +236,36 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 379167
+                "amount": 378467
             },
-            "entryId": "116771483368816641",
-            "timestamp": 1781791437278
+            "entryId": "116776365029327105",
+            "timestamp": 1781865925475
+        },
+        {
+            "counterparty": {
+                "iban": "KZ97182I9WIM6RERHEZ1",
+                "name": "Adyen Payouts BV",
+                "reference": "Stripe payout May 2026"
+            },
+            "transaction": {
+                "type": "incoming_wire_transfers",
+                "id": "116776364384583681",
+                "subtype": "fundings"
+            },
+            "executingAccessInstrument": {
+                "type": "ibans",
+                "id": "116776347836743681"
+            },
+            "balanceAdjustment": {
+                "currency": "EUR",
+                "amount": 1000
+            },
+            "balanceAfter": {
+                "currency": "EUR",
+                "amount": 379467
+            },
+            "entryId": "116776365396983809",
+            "timestamp": 1781865931049
         },
         {
             "forex": {
@@ -358,20 +277,20 @@
             "description": "Fee reversal - case CS-89234",
             "transaction": {
                 "type": "fees",
-                "id": "116771482857897985",
+                "id": "116776364677267457",
                 "subtype": "fee_reversals"
             },
-            "relatedEntryId": "116771482917011457",
+            "relatedEntryId": "116776364744638465",
             "balanceAdjustment": {
                 "currency": "EUR",
                 "amount": 100
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 379267
+                "amount": 379567
             },
-            "entryId": "116771484337700865",
-            "timestamp": 1781791452050
+            "entryId": "116776366247313409",
+            "timestamp": 1781865943942
         },
         {
             "forex": {
@@ -383,7 +302,7 @@
             "description": "Balance Adjustment: Goodwill credit - case CS-89234",
             "transaction": {
                 "type": "system_transactions",
-                "id": "116771484337963009",
+                "id": "116776366390706689",
                 "subtype": "balance_adjustments"
             },
             "balanceAdjustment": {
@@ -392,10 +311,10 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 380267
+                "amount": 380567
             },
-            "entryId": "116771484366471169",
-            "timestamp": 1781791452454
+            "entryId": "116776366438416385",
+            "timestamp": 1781865946946
         },
         {
             "forex": {
@@ -407,7 +326,7 @@
             "description": "STATEMENT_FEE",
             "transaction": {
                 "type": "fees",
-                "id": "116771484372107521",
+                "id": "116776366447722753",
                 "subtype": "custom_fees"
             },
             "balanceAdjustment": {
@@ -416,10 +335,10 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 380257
+                "amount": 380557
             },
-            "entryId": "116771484487254017",
-            "timestamp": 1781791454237
+            "entryId": "116776366568505345",
+            "timestamp": 1781865948923
         },
         {
             "counterparty": {
@@ -429,7 +348,7 @@
             },
             "fee": {
                 "type": "fees",
-                "id": "116771482971471873",
+                "id": "116776364797657089",
                 "subtype": "outgoing_wire_transfer_fees",
                 "amount": {
                     "currency": "EUR",
@@ -445,11 +364,11 @@
             "description": "Invoice INV-2026-0419",
             "transaction": {
                 "type": "outgoing_wire_transfers",
-                "id": "116771482971471873"
+                "id": "116776364797657089"
             },
             "executingAccessInstrument": {
                 "type": "ibans",
-                "id": "116771462383730689"
+                "id": "116776347836743681"
             },
             "balanceAdjustment": {
                 "currency": "EUR",
@@ -457,21 +376,21 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 379257
+                "amount": 379557
             },
-            "entryId": "116771484506062849",
-            "timestamp": 1781791454528
+            "entryId": "116776366584168449",
+            "timestamp": 1781865948964
         },
         {
             "transaction": {
                 "type": "fees",
-                "id": "116771482971471873",
+                "id": "116776364797657089",
                 "subtype": "outgoing_wire_transfer_fees"
             },
-            "relatedEntryId": "116771484506062849",
+            "relatedEntryId": "116776366584168449",
             "executingAccessInstrument": {
                 "type": "ibans",
-                "id": "116771462383730689"
+                "id": "116776347836743681"
             },
             "balanceAdjustment": {
                 "currency": "EUR",
@@ -479,10 +398,10 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 379177
+                "amount": 379477
             },
-            "entryId": "116771484508356865",
-            "timestamp": 1781791454528
+            "entryId": "116776366603960577",
+            "timestamp": 1781865948964
         },
         {
             "forex": {
@@ -494,35 +413,26 @@
             "description": "Statement fee reversal - case CS-89251",
             "transaction": {
                 "type": "fees",
-                "id": "116771484372107521",
+                "id": "116776366447722753",
                 "subtype": "fee_reversals"
             },
-            "relatedEntryId": "116771484487254017",
+            "relatedEntryId": "116776366568505345",
             "balanceAdjustment": {
                 "currency": "EUR",
                 "amount": 10
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 379187
+                "amount": 379487
             },
-            "entryId": "116771484588441601",
-            "timestamp": 1781791455885
+            "entryId": "116776366658093057",
+            "timestamp": 1781865950358
         },
         {
             "counterparty": {
                 "type": "managed_cards",
                 "friendlyName": "Travel Spend Card",
-                "id": "116771462438584321"
-            },
-            "fee": {
-                "type": "fees",
-                "id": "116771484705488897",
-                "subtype": "transfer_fees",
-                "amount": {
-                    "currency": "EUR",
-                    "amount": 100
-                }
+                "id": "116776347965587457"
             },
             "forex": {
                 "originalAmount": {
@@ -532,7 +442,7 @@
             },
             "transaction": {
                 "type": "transfers",
-                "id": "116771484705488897"
+                "id": "116776366835695617"
             },
             "balanceAdjustment": {
                 "currency": "EUR",
@@ -540,43 +450,16 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 379087
+                "amount": 379387
             },
-            "entryId": "116771484902031361",
-            "timestamp": 1781791459273
-        },
-        {
-            "transaction": {
-                "type": "fees",
-                "id": "116771484705488897",
-                "subtype": "transfer_fees"
-            },
-            "relatedEntryId": "116771484902031361",
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": -100
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 378987
-            },
-            "entryId": "116771484904390913",
-            "timestamp": 1781791459273
+            "entryId": "116776366999470081",
+            "timestamp": 1781865954897
         },
         {
             "counterparty": {
                 "type": "managed_cards",
                 "friendlyName": "Travel Spend Card",
-                "id": "116771462438584321"
-            },
-            "fee": {
-                "type": "fees",
-                "id": "116771484934864897",
-                "subtype": "transfer_fees",
-                "amount": {
-                    "currency": "EUR",
-                    "amount": 100
-                }
+                "id": "116776347965587457"
             },
             "forex": {
                 "originalAmount": {
@@ -586,7 +469,7 @@
             },
             "transaction": {
                 "type": "transfers",
-                "id": "116771484934864897"
+                "id": "116776367102296065"
             },
             "balanceAdjustment": {
                 "currency": "EUR",
@@ -594,28 +477,10 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 378887
+                "amount": 379287
             },
-            "entryId": "116771485082517505",
-            "timestamp": 1781791462944
-        },
-        {
-            "transaction": {
-                "type": "fees",
-                "id": "116771484934864897",
-                "subtype": "transfer_fees"
-            },
-            "relatedEntryId": "116771485082517505",
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": -100
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 378787
-            },
-            "entryId": "116771485085335553",
-            "timestamp": 1781791462944
+            "entryId": "116776367383248897",
+            "timestamp": 1781865959945
         },
         {
             "counterparty": {
@@ -625,7 +490,7 @@
             },
             "fee": {
                 "type": "fees",
-                "id": "116771484860874753",
+                "id": "116776367090434049",
                 "subtype": "purchase_fees",
                 "amount": {
                     "currency": "EUR",
@@ -634,7 +499,7 @@
             },
             "transaction": {
                 "type": "card_payments",
-                "id": "116771484860874753",
+                "id": "116776367090434049",
                 "subtype": "sale_purchases"
             },
             "balanceAdjustment": {
@@ -643,28 +508,28 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 378687
+                "amount": 379187
             },
-            "entryId": "116771485105717249",
-            "timestamp": 1781791463574
+            "entryId": "116776367447801857",
+            "timestamp": 1781865962169
         },
         {
             "transaction": {
                 "type": "fees",
-                "id": "116771484860874753",
+                "id": "116776367090434049",
                 "subtype": "purchase_fees"
             },
-            "relatedEntryId": "116771485105717249",
+            "relatedEntryId": "116776367447801857",
             "balanceAdjustment": {
                 "currency": "EUR",
                 "amount": -10
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 378677
+                "amount": 379177
             },
-            "entryId": "116771485116268545",
-            "timestamp": 1781791463574
+            "entryId": "116776367453634817",
+            "timestamp": 1781865962169
         },
         {
             "counterparty": {
@@ -674,7 +539,7 @@
             },
             "fee": {
                 "type": "fees",
-                "id": "116771484960555009",
+                "id": "116776367256895489",
                 "subtype": "purchase_fees",
                 "amount": {
                     "currency": "EUR",
@@ -683,7 +548,7 @@
             },
             "transaction": {
                 "type": "card_payments",
-                "id": "116771484960555009",
+                "id": "116776367256895489",
                 "subtype": "sale_purchases"
             },
             "balanceAdjustment": {
@@ -692,271 +557,28 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 378577
+                "amount": 379077
             },
-            "entryId": "116771485215031553",
-            "timestamp": 1781791465299
+            "entryId": "116776367615442945",
+            "timestamp": 1781865964790
         },
         {
             "transaction": {
                 "type": "fees",
-                "id": "116771484960555009",
+                "id": "116776367256895489",
                 "subtype": "purchase_fees"
             },
-            "relatedEntryId": "116771485215031553",
+            "relatedEntryId": "116776367615442945",
             "balanceAdjustment": {
                 "currency": "EUR",
                 "amount": -10
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 378567
+                "amount": 379067
             },
-            "entryId": "116771485259333889",
-            "timestamp": 1781791465299
-        },
-        {
-            "counterparty": {
-                "type": "managed_accounts",
-                "owner": {
-                    "id": "116771466909911041",
-                    "name": "Jane Dae",
-                    "type": "consumers"
-                },
-                "id": "116771471003484161"
-            },
-            "fee": {
-                "type": "fees",
-                "id": "116771485576003585",
-                "subtype": "send_fees",
-                "amount": {
-                    "currency": "EUR",
-                    "amount": 100
-                }
-            },
-            "forex": {
-                "originalAmount": {
-                    "currency": "EUR",
-                    "amount": 0
-                }
-            },
-            "transaction": {
-                "type": "sends",
-                "id": "116771485576003585"
-            },
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": -163
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 378404
-            },
-            "entryId": "116771485657923585",
-            "timestamp": 1781791472071
-        },
-        {
-            "transaction": {
-                "type": "fees",
-                "id": "116771485576003585",
-                "subtype": "send_fees"
-            },
-            "relatedEntryId": "116771485657923585",
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": -100
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 378304
-            },
-            "entryId": "116771485740368385",
-            "timestamp": 1781791472071
-        },
-        {
-            "counterparty": {
-                "country": "MT",
-                "categoryCode": "5399",
-                "name": "Etsy DE"
-            },
-            "fee": {
-                "type": "fees",
-                "id": "116771485331947521",
-                "subtype": "purchase_fees",
-                "amount": {
-                    "currency": "EUR",
-                    "amount": 10
-                }
-            },
-            "transaction": {
-                "type": "card_payments",
-                "id": "116771485331947521",
-                "subtype": "sale_purchases"
-            },
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": -100
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 378204
-            },
-            "entryId": "116771485692264449",
-            "timestamp": 1781791472559
-        },
-        {
-            "transaction": {
-                "type": "fees",
-                "id": "116771485331947521",
-                "subtype": "purchase_fees"
-            },
-            "relatedEntryId": "116771485692264449",
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": -10
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 378194
-            },
-            "entryId": "116771485699014913",
-            "timestamp": 1781791472559
-        },
-        {
-            "counterparty": {
-                "bic": "NWBKGB2L",
-                "iban": "GB29NWBK60161331926819",
-                "name": "Globex Logistics Ltd"
-            },
-            "fee": {
-                "type": "fees",
-                "id": "116771485089792001",
-                "subtype": "outgoing_wire_transfer_fees",
-                "amount": {
-                    "currency": "EUR",
-                    "amount": 80
-                }
-            },
-            "forex": {
-                "originalAmount": {
-                    "currency": "EUR",
-                    "amount": 0
-                }
-            },
-            "description": "Invoice INV-2026-0488",
-            "transaction": {
-                "type": "outgoing_wire_transfers",
-                "id": "116771485089792001"
-            },
-            "executingAccessInstrument": {
-                "type": "ibans",
-                "id": "116771462383730689"
-            },
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": -1000
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 377194
-            },
-            "entryId": "116771485752557569",
-            "timestamp": 1781791473511
-        },
-        {
-            "transaction": {
-                "type": "fees",
-                "id": "116771485089792001",
-                "subtype": "outgoing_wire_transfer_fees"
-            },
-            "relatedEntryId": "116771485752557569",
-            "executingAccessInstrument": {
-                "type": "ibans",
-                "id": "116771462383730689"
-            },
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": -80
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 377114
-            },
-            "entryId": "116771485755441409",
-            "timestamp": 1781791473511
-        },
-        {
-            "counterparty": {
-                "country": "MT",
-                "categoryCode": "5399",
-                "name": "Etsy DE"
-            },
-            "fee": {
-                "type": "fees",
-                "id": "116771485331947521",
-                "subtype": "refund_fees",
-                "amount": {
-                    "currency": "EUR",
-                    "amount": 5
-                }
-            },
-            "transaction": {
-                "type": "card_payments",
-                "id": "116771485331947521",
-                "subtype": "purchase_refunds"
-            },
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": 100
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 377214
-            },
-            "entryId": "116771485835198721",
-            "timestamp": 1781791474697
-        },
-        {
-            "transaction": {
-                "type": "fees",
-                "id": "116771485331947521",
-                "subtype": "refund_fees"
-            },
-            "relatedEntryId": "116771485835198721",
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": -5
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 377209
-            },
-            "entryId": "116771485848109313",
-            "timestamp": 1781791474697
-        },
-        {
-            "forex": {
-                "originalAmount": {
-                    "currency": "EUR",
-                    "amount": 0
-                }
-            },
-            "description": "Balance Adjustment: Reconciliation adjustment - May 2026",
-            "transaction": {
-                "type": "system_transactions",
-                "id": "116771485745152257",
-                "subtype": "balance_adjustments"
-            },
-            "balanceAdjustment": {
-                "currency": "EUR",
-                "amount": 1000
-            },
-            "balanceAfter": {
-                "currency": "EUR",
-                "amount": 378209
-            },
-            "entryId": "116771485845880833",
-            "timestamp": 1781791474889
+            "entryId": "116776367620555265",
+            "timestamp": 1781865964790
         },
         {
             "counterparty": {
@@ -966,7 +588,7 @@
             },
             "fee": {
                 "type": "fees",
-                "id": "116771485363601409",
+                "id": "116776367709945857",
                 "subtype": "purchase_fees",
                 "amount": {
                     "currency": "EUR",
@@ -989,7 +611,7 @@
             },
             "transaction": {
                 "type": "card_payments",
-                "id": "116771485363601409",
+                "id": "116776367709945857",
                 "subtype": "sale_purchases"
             },
             "balanceAdjustment": {
@@ -998,39 +620,308 @@
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 377021
+                "amount": 377879
             },
-            "entryId": "116771485970071553",
-            "timestamp": 1781791476878
+            "entryId": "116776368124919809",
+            "timestamp": 1781865972516
         },
         {
             "transaction": {
                 "type": "fees",
-                "id": "116771485363601409",
+                "id": "116776367709945857",
                 "subtype": "purchase_fees"
             },
-            "relatedEntryId": "116771485970071553",
+            "relatedEntryId": "116776368124919809",
             "balanceAdjustment": {
                 "currency": "EUR",
                 "amount": -10
             },
             "balanceAfter": {
                 "currency": "EUR",
-                "amount": 377011
+                "amount": 377869
             },
-            "entryId": "116771485973676545",
-            "timestamp": 1781791476878
+            "entryId": "116776368178725377",
+            "timestamp": 1781865972516
+        },
+        {
+            "counterparty": {
+                "type": "managed_accounts",
+                "owner": {
+                    "id": "116776353728562433",
+                    "name": "Jane Dae",
+                    "type": "consumers"
+                },
+                "id": "116776358806290433"
+            },
+            "fee": {
+                "type": "fees",
+                "id": "116776367961604097",
+                "subtype": "send_fees",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 100
+                }
+            },
+            "forex": {
+                "originalAmount": {
+                    "currency": "EUR",
+                    "amount": 0
+                }
+            },
+            "transaction": {
+                "type": "sends",
+                "id": "116776367961604097"
+            },
+            "balanceAdjustment": {
+                "currency": "EUR",
+                "amount": -163
+            },
+            "balanceAfter": {
+                "currency": "EUR",
+                "amount": 377706
+            },
+            "entryId": "116776368252583937",
+            "timestamp": 1781865974040
+        },
+        {
+            "transaction": {
+                "type": "fees",
+                "id": "116776367961604097",
+                "subtype": "send_fees"
+            },
+            "relatedEntryId": "116776368252583937",
+            "balanceAdjustment": {
+                "currency": "EUR",
+                "amount": -100
+            },
+            "balanceAfter": {
+                "currency": "EUR",
+                "amount": 377606
+            },
+            "entryId": "116776368317595649",
+            "timestamp": 1781865974040
+        },
+        {
+            "counterparty": {
+                "iban": "RO87NROAMGQCEKM8TJ842WRO",
+                "name": "Wise Payments Ltd",
+                "reference": "Marketplace settlement May 2026"
+            },
+            "transaction": {
+                "type": "incoming_wire_transfers",
+                "id": "116776367432007681",
+                "subtype": "fundings"
+            },
+            "executingAccessInstrument": {
+                "type": "ibans",
+                "id": "116776347836743681"
+            },
+            "balanceAdjustment": {
+                "currency": "EUR",
+                "amount": 1000
+            },
+            "balanceAfter": {
+                "currency": "EUR",
+                "amount": 378606
+            },
+            "entryId": "116776368268771329",
+            "timestamp": 1781865974849
+        },
+        {
+            "counterparty": {
+                "bic": "NWBKGB2L",
+                "iban": "GB29NWBK60161331926819",
+                "name": "Globex Logistics Ltd"
+            },
+            "fee": {
+                "type": "fees",
+                "id": "116776367389474817",
+                "subtype": "outgoing_wire_transfer_fees",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 80
+                }
+            },
+            "forex": {
+                "originalAmount": {
+                    "currency": "EUR",
+                    "amount": 0
+                }
+            },
+            "description": "Invoice INV-2026-0488",
+            "transaction": {
+                "type": "outgoing_wire_transfers",
+                "id": "116776367389474817"
+            },
+            "executingAccessInstrument": {
+                "type": "ibans",
+                "id": "116776347836743681"
+            },
+            "balanceAdjustment": {
+                "currency": "EUR",
+                "amount": -1000
+            },
+            "balanceAfter": {
+                "currency": "EUR",
+                "amount": 377606
+            },
+            "entryId": "116776368303439873",
+            "timestamp": 1781865975360
+        },
+        {
+            "transaction": {
+                "type": "fees",
+                "id": "116776367389474817",
+                "subtype": "outgoing_wire_transfer_fees"
+            },
+            "relatedEntryId": "116776368303439873",
+            "executingAccessInstrument": {
+                "type": "ibans",
+                "id": "116776347836743681"
+            },
+            "balanceAdjustment": {
+                "currency": "EUR",
+                "amount": -80
+            },
+            "balanceAfter": {
+                "currency": "EUR",
+                "amount": 377526
+            },
+            "entryId": "116776368308879617",
+            "timestamp": 1781865975360
+        },
+        {
+            "forex": {
+                "originalAmount": {
+                    "currency": "EUR",
+                    "amount": 0
+                }
+            },
+            "description": "Balance Adjustment: Reconciliation adjustment - May 2026",
+            "transaction": {
+                "type": "system_transactions",
+                "id": "116776368323952897",
+                "subtype": "balance_adjustments"
+            },
+            "balanceAdjustment": {
+                "currency": "EUR",
+                "amount": 1000
+            },
+            "balanceAfter": {
+                "currency": "EUR",
+                "amount": 378526
+            },
+            "entryId": "116776368353050625",
+            "timestamp": 1781865976129
+        },
+        {
+            "counterparty": {
+                "country": "MT",
+                "categoryCode": "5399",
+                "name": "Refundable.com"
+            },
+            "fee": {
+                "type": "fees",
+                "id": "116776395604164609",
+                "subtype": "purchase_fees",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 10
+                }
+            },
+            "transaction": {
+                "type": "card_payments",
+                "id": "116776395604164609",
+                "subtype": "sale_purchases"
+            },
+            "balanceAdjustment": {
+                "currency": "EUR",
+                "amount": -1000
+            },
+            "balanceAfter": {
+                "currency": "EUR",
+                "amount": 377526
+            },
+            "entryId": "116776395703123969",
+            "timestamp": 1781866393391
+        },
+        {
+            "transaction": {
+                "type": "fees",
+                "id": "116776395604164609",
+                "subtype": "purchase_fees"
+            },
+            "relatedEntryId": "116776395703123969",
+            "balanceAdjustment": {
+                "currency": "EUR",
+                "amount": -10
+            },
+            "balanceAfter": {
+                "currency": "EUR",
+                "amount": 377516
+            },
+            "entryId": "116776395705877249",
+            "timestamp": 1781866393391
+        },
+        {
+            "counterparty": {
+                "country": "MT",
+                "categoryCode": "5399",
+                "name": "Refundable.com"
+            },
+            "fee": {
+                "type": "fees",
+                "id": "116776395604164609",
+                "subtype": "refund_fees",
+                "amount": {
+                    "currency": "EUR",
+                    "amount": 5
+                }
+            },
+            "transaction": {
+                "type": "card_payments",
+                "id": "116776395604164609",
+                "subtype": "purchase_refunds"
+            },
+            "balanceAdjustment": {
+                "currency": "EUR",
+                "amount": 1000
+            },
+            "balanceAfter": {
+                "currency": "EUR",
+                "amount": 378516
+            },
+            "entryId": "116776395770036225",
+            "timestamp": 1781866394509
+        },
+        {
+            "transaction": {
+                "type": "fees",
+                "id": "116776395604164609",
+                "subtype": "refund_fees"
+            },
+            "relatedEntryId": "116776395770036225",
+            "balanceAdjustment": {
+                "currency": "EUR",
+                "amount": -5
+            },
+            "balanceAfter": {
+                "currency": "EUR",
+                "amount": 378511
+            },
+            "entryId": "116776395772592641",
+            "timestamp": 1781866394509
         }
     ],
-    "footer": "Electronic money account is provided by Paynetics AD (via Paystratus Group Ltd, a Technical Provider of Paynetics AD) with company address 76A James Bourchier Blvd, 1407 Sofia, Bulgaria, company registration number 131574695 and VAT BG131574695, pursuant to license by Bulgarian National Bank",
-    "responseCount": 38,
+    "footer": "The Electronic money account is provided by Weavr (Europe) Limited having company address registered at Ardent Business Centre, Triq l-Oratorju, Naxxar, NXR2504, Malta, and company registration number C98895, pursuant to an electronic money license issued by the Malta Financial Services Authority.",
+    "responseCount": 34,
     "closingBalance": {
         "currency": "EUR",
-        "amount": 377011
+        "amount": 378511
     },
     "openingBalance": {
         "currency": "EUR",
         "amount": 0
     },
-    "count": 38
+    "count": 34
 }
