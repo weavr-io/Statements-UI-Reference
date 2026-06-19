@@ -2,7 +2,7 @@ import { Fragment, useState, type KeyboardEvent } from 'react';
 import type { ActivityTransaction } from '../api/activity-types';
 import { formatMoney, formatTimestamp } from '../format';
 import { transactionLabel, categoryTone } from '../labels';
-import { activityCounterparty, activityStatusTone } from '../activity-display';
+import { activityCounterparty, activityStatusTone, isFullyRefunded } from '../activity-display';
 import { ActivityDetailPanel } from './ActivityDetailPanel';
 
 interface Props {
@@ -22,6 +22,7 @@ function ActivityRow({ tx }: { tx: ActivityTransaction }) {
   const cp = activityCounterparty(tx);
   const tone = categoryTone(tx.type);
   const credit = tx.direction === 'CREDIT';
+  const refunded = isFullyRefunded(tx);
 
   const onRowClick = () => setExpanded(v => !v);
   const onRowKey = (e: KeyboardEvent) => {
@@ -65,7 +66,9 @@ function ActivityRow({ tx }: { tx: ActivityTransaction }) {
           <span className={`status-badge status-${activityStatusTone(tx.status)}`}>{tx.status}</span>
         </td>
         <td className={`num amount ${credit ? 'credit' : 'debit'}`}>
-          <span className="amount-value">{credit ? '+' : '−'}{formatMoney(tx.amount)}</span>
+          <span className={`amount-value${refunded ? ' refunded' : ''}`} title={refunded ? 'Refunded' : undefined}>
+            {credit ? '+' : '−'}{formatMoney(tx.amount)}
+          </span>
           <ChevronIcon />
         </td>
       </tr>

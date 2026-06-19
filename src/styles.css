@@ -809,6 +809,13 @@ td.entry-time {
   vertical-align: middle;
 }
 
+/* Fully-refunded card payment: the debit no longer stands. */
+.amount-value.refunded {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.5px;
+  color: var(--muted);
+}
+
 /* Card event timeline ------------------------------------------------- */
 
 .event-timeline {

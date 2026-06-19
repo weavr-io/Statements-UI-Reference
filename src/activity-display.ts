@@ -143,6 +143,18 @@ function selfIdFromTransaction(tx: ActivityTransaction, instrumentType: Instrume
   }
 }
 
+/* A card payment whose REFUND events fully cover its amount has been reversed — the
+ * original debit no longer stands, which the UI signals by striking the amount through. */
+export function isFullyRefunded(tx: ActivityTransaction): boolean {
+  if (tx.type !== 'card_payments') return false;
+  const p = tx.transaction as CardPaymentActivity;
+  const refunded = (p.events ?? [])
+    .filter(e => e.type === 'REFUND')
+    .reduce((sum, e) => sum + (e.billingAmount?.amount ?? 0), 0);
+  const charged = p.displayAmount?.amount ?? tx.amount.amount;
+  return refunded > 0 && refunded >= charged;
+}
+
 export type StatusTone = 'ok' | 'pending' | 'warn' | 'neutral';
 
 export function activityStatusTone(status: string): StatusTone {
