@@ -166,22 +166,49 @@ function amountItems(tx: ActivityTransaction): Item[] {
   return items;
 }
 
+const FEE_TYPE_LABELS: Record<string, string> = {
+  FOREX_FEE: 'Forex fee',
+  PLATFORM_FEE: 'Platform fee',
+};
+
+function feeTypeLabel(type: string): string {
+  return FEE_TYPE_LABELS[type] ?? type.replace(/_/g, ' ').toLowerCase().replace(/^\w/, c => c.toUpperCase());
+}
+
 function CardEvents({ payment }: { payment: CardPaymentActivity }) {
   return (
     <div className="detail-section">
       <h3 className="detail-section-title">Card events</h3>
       <ol className="event-timeline">
-        {payment.events.map(ev => (
-          <li key={ev.id + ev.type} className="event-item">
-            <span className="event-type">{ev.type}</span>
-            <span className="event-meta">
-              {ev.billingAmount && <span>{formatMoney(ev.billingAmount)}</span>}
-              {ev.result && <span>{ev.result}</span>}
-              {ev.settlementState && <span>{ev.settlementState}</span>}
-              {ev.authCode && <span>auth {ev.authCode}</span>}
-            </span>
-          </li>
-        ))}
+        {payment.events.map(ev => {
+          const billing = ev.billingAmount;
+          const txn = ev.transactionAmount;
+          // Cross-currency: show the original amount converted to the billed amount,
+          // so a foreign purchase reads "£10.00 → €11.54" rather than just "€11.54".
+          const crossCurrency = !!(billing && txn && txn.currency !== billing.currency);
+          // Only fees that actually applied — domestic events carry zeroed forex/platform fees.
+          const fees = (ev.fees ?? []).filter(f => f.amount.amount !== 0);
+          return (
+            <li key={ev.id + ev.type} className="event-item">
+              <div className="event-head">
+                <span className="event-type">{ev.type}</span>
+                {ev.result && <span>{ev.result}</span>}
+                {ev.settlementState && <span>{ev.settlementState}</span>}
+                {ev.authCode && <span>auth {ev.authCode}</span>}
+              </div>
+              <div className="event-amounts">
+                {billing && (
+                  <span className="event-amount">
+                    {crossCurrency && txn ? `${formatMoney(txn)} → ${formatMoney(billing)}` : formatMoney(billing)}
+                  </span>
+                )}
+                {fees.map((f, i) => (
+                  <span key={f.type + i} className="event-fee">{feeTypeLabel(f.type)} {formatMoney(f.amount)}</span>
+                ))}
+              </div>
+            </li>
+          );
+        })}
       </ol>
     </div>
   );
