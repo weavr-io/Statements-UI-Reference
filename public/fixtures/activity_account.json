@@ -17,6 +17,7 @@
                     "currency": "EUR",
                     "amount": 1000
                 },
+                "reason" : "Balance Adjustment: Reconciliation adjustment - May 2026",
                 "id": "116776368323952897"
             },
             "amount": {
@@ -349,6 +350,7 @@
                     "currency": "EUR",
                     "amount": 1000
                 },
+                "reason" : "Goodwill credit - case CS-89234",
                 "id": "116776366390706689"
             },
             "amount": {
