@@ -1,0 +1,25 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "framework": "vite",
+  "rewrites": [
+    {
+      "source": "/managed_accounts/:id(\\d+)/statement",
+      "has": [{ "type": "header", "key": "accept", "value": ".*application/pdf.*" }],
+      "destination": "/fixtures/statement.pdf"
+    },
+    {
+      "source": "/managed_accounts/:id(\\d+)/statement",
+      "destination": "/fixtures/statement.json"
+    },
+    {
+      "source": "/managed_accounts/:id(\\d+)/transactions",
+      "destination": "/fixtures/activity_account.json"
+    },
+    {
+      "source": "/managed_cards/:id(\\d+)/transactions",
+      "destination": "/fixtures/activity_card.json"
+    }
+  ]
+}
